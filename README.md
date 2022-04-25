@@ -10,7 +10,7 @@ Public Repo for Team 96 @ Oyun ve Uygulama Akademisi Bootcamp
 
 ## Git Repo
 
-<https://github.com/ezgiksrci/Bootcamp->
+<https://github.com/ezgiksrci/Bootcamp>
 
 ## Team Members
 
