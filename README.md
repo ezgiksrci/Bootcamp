@@ -1,21 +1,38 @@
-# **Team 96**
-
 Public Repo for Team 96 @ Oyun ve Uygulama Akademisi Bootcamp
 
-# Part 1
 
-## Team 96
+# **Takım İsmi/Numarası**
 
---Team 96--
+Takım 96
 
-## Git Repo
+# Ürün İle İlgili Bilgiler
+-
 
-<https://github.com/ezgiksrci/Bootcamp>
+## Takım Elemanları
 
-## Team Members
+- Ezgi Keserci: Scrum Master/Developer
+- Taha Enes Kür: Product Owner/Developer
+- Berkay Toylan: Team member/Developer
+- Muhammet Doğan: Team member
 
-- ???: Product Owner
-- Ezgi Keserci: Scrum Master
-- Taha Enes Kür: Team Member/Developer
-- Muhammet Doğan
-- Berkay Toylan
+
+## Ürün İsmi
+
+--Hexagonal Tunnel Runner--
+
+## Ürün Açıklaması
+
+- 
+
+## Ürün Özellikleri
+
+- 
+
+## Hedef Kitle
+
+- Eğlenceli vakit geçirmek isteyenler
+- Oyun oynamayı seven kişiler
+- 10 - 65 yaş arası kullanıcılar
+
+## Product Backlog URL
+<...>(...)
