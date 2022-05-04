@@ -11,14 +11,14 @@ Takım 96
 ## Takım Elemanları
 
 - Ezgi Keserci: Scrum Master/Developer
-- Taha Enes Kür: Product Owner/Developer
+- Muhammet Doğan: Product Owner/Developer
 - Berkay Toylan: Team member/Developer
-- Muhammet Doğan: Team member
+- Taha Enes Kür: Team member/Developer
 
 
 ## Ürün İsmi
 
---Hexagonal Tunnel Runner--
+--Flying Broom Race--
 
 ## Ürün Açıklaması
 
