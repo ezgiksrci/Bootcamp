@@ -35,5 +35,4 @@ Takım 96
 - 10 - 65 yaş arası kullanıcılar
 
 ## Product Backlog URL
-<https://miro.com/app/board/uXjVO3XkfcQ=/?share_link_id=811205731674
-...>(...)
+https://miro.com/app/board/uXjVO3XkfcQ=/?share_link_id=811205731674
