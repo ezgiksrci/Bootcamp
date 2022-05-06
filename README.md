@@ -36,3 +36,25 @@ Takım 96
 
 ## Product Backlog URL
 https://miro.com/app/board/uXjVO3XkfcQ=/?share_link_id=811205731674
+
+---
+
+# Sprint 1
+- **Sprint Notları**: Oyunun genel hatları konuşulup kararlaştırıldı.
+ 
+- **Backlog düzeni:** Backlog'umuz ilk yapılacak backloglara göre düzenlenmiştir.
+ 
+- **Daily Scrum:** Daily Scrum toplantılarının zamansal sebeplerden ötürü Whatsapp üzerinden yapılmasına karar verilmiştir. Gerekli görülmesi halinde Discord üzerinden de voice chat ile Daily Scrum gerçekleştirilecektir. Daily Scrum notları linkte paylaşılacaktır: <…> 
+ 
+- **Sprint board update:** Sprint board screenshotları: <...>
+ 
+- **Sprint Review:** Alınan kararlar: Oyunun temel mekaniklerine karar verildi. Oyun uçan süpürge yarışı olacak. Android için yapılacak. Yatay ekranda olacak. Oyuncuya ek olarak AI yarışçılar olacak. Harita static yapıda olacak. Powerup’lar sayesinde değişik büyü yetenekleri kazanılacak ve bu büyüler saldırı ya da savunma şeklinde oyuncuya kısa süreliğine çeşitli avantajlar sağlayacak. Belki ekranın bazı yerlerinde yarışmacılara saldıran çeşitli düşmanlar da gözükebilir. Başlangıçta oyunun prototiplemesinin yapılmasına karar verildi.
+ 	
+*Sprint Review katılımcıları:* 
+- 	Ezgi Keserci
+- 	Muhammet Doğan
+- 	Taha Enes Kür
+- 	Berkay Toylan
+
+**Diğer Notlar:**
+N/A
