@@ -18,19 +18,24 @@ Takım 96
 
 ## Ürün İsmi
 
---Flying Broom Race--
+- Flying Broom Race
 
 ## Ürün Açıklaması
 
-- 
+- Oyun, uçan süpürge yarışıdır. Amaç, yapay zeka tarafından yönetilen diğer rakip yarışmacıları geçerek bitişe varmaya çalışmak. Oyun, Android için çıkacaktır.  
 
 ## Ürün Özellikleri
 
-- 
+- Tür: Yarış, Hypercasual
+- Platform: Mobile / Android
+- Çeşitli güçlendirmelerle yarışta değişik avantajlar elde edilecek.
+- Yarışmadaki AI rakiplerle yarışılacak.
+- Map, statik yapıda olacak.
 
 ## Hedef Kitle
 
 - Eğlenceli vakit geçirmek isteyenler
+- Boş zamanını doldurmak isteyenler
 - Oyun oynamayı seven kişiler
 - 10 - 65 yaş arası kullanıcılar
 
@@ -59,5 +64,5 @@ https://miro.com/app/board/uXjVO3XkfcQ=/?share_link_id=811205731674
 **Diğer Notlar:**
 - 	Mockup ve Oyun Özeti
 
-![alt text](https://github.com/ezgiksrci/Bootcamp/blob/main/Oyun_Mockup.jpeg)
-![alt text](https://github.com/ezgiksrci/Bootcamp/blob/main/Oyun_Ozet.jpeg)
+![Oyun Mockup Çizimi](https://github.com/ezgiksrci/Bootcamp/blob/main/Oyun_Mockup.jpeg)
+![Oyun Özet Notları](https://github.com/ezgiksrci/Bootcamp/blob/main/Oyun_Ozet.jpeg)
