@@ -6,7 +6,6 @@ Public Repo for Team 96 @ Oyun ve Uygulama Akademisi Bootcamp
 Takım 96
 
 # Ürün İle İlgili Bilgiler
--
 
 ## Takım Elemanları
 
