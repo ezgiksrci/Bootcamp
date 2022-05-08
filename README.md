@@ -57,4 +57,7 @@ https://miro.com/app/board/uXjVO3XkfcQ=/?share_link_id=811205731674
 - 	Berkay Toylan
 
 **Diğer Notlar:**
-N/A
+- 	Mockup ve Oyun Özeti
+
+![alt text](https://github.com/ezgiksrci/Bootcamp/blob/main/Oyun_Mockup.jpeg)
+![alt text](https://github.com/ezgiksrci/Bootcamp/blob/main/Oyun_Ozet.jpeg)
