@@ -50,7 +50,7 @@ https://miro.com/app/board/uXjVO3XkfcQ=/?share_link_id=952903156056
  
 - **Daily Scrum:** Daily Scrum toplantılarının zamansal sebeplerden ötürü Whatsapp üzerinden yapılmasına karar verilmiştir. Gerekli görülmesi halinde Discord üzerinden de voice chat ile Daily Scrum gerçekleştirilecektir. Daily Scrum notları linkte paylaşılacaktır: <https://github.com/ezgiksrci/Bootcamp/blob/main/ProjectManagement/Sprint1Documents/DailyScrum_WhatsApp.txt> 
  
-- **Sprint board update:** Sprint board screenshotları: ![Backlog 1](https://github.com/ezgiksrci/Bootcamp/blob/main/backlog1.png)
+- **Sprint board update:** Sprint board screenshotları: ![Backlog 1](https://github.com/ezgiksrci/Bootcamp/blob/main/ProjectManagement/Sprint1Documents/Backlog1.png)
 
 - **Ürün Durumu:** Ekran görüntüleri:
 ![Product Screenshot 1](https://github.com/ezgiksrci/Bootcamp/blob/main/ProjectManagement/Sprint1Documents/Product_SS1.png)
