@@ -52,17 +52,14 @@ https://miro.com/app/board/uXjVO3XkfcQ=/?share_link_id=952903156056
  
 - **Sprint board update:** Sprint board screenshotları: ![Backlog 1](https://github.com/ezgiksrci/Bootcamp/blob/main/backlog1.png)
 
--**Ürün Durumu:** Ekran görüntüleri:
+- **Ürün Durumu:** Ekran görüntüleri:
 ![Product Screenshot 1](https://github.com/ezgiksrci/Bootcamp/blob/main/ProjectManagement/Sprint1Documents/Product_SS1.png)
 ![Product Screenshot 2](https://github.com/ezgiksrci/Bootcamp/blob/main/ProjectManagement/Sprint1Documents/Product_SS2.png) 
  
-- **Sprint Review:** Alınan kararlar: Oyunun temel mekaniklerine karar verildi. Oyun uçan süpürge yarışı olacak. Android için yapılacak. Yatay ekranda olacak. Oyuncuya ek olarak AI yarışçılar olacak. Harita static yapıda olacak. Powerup’lar sayesinde değişik büyü yetenekleri kazanılacak ve bu büyüler saldırı ya da savunma şeklinde oyuncuya kısa süreliğine çeşitli avantajlar sağlayacak. Belki ekranın bazı yerlerinde yarışmacılara saldıran çeşitli düşmanlar da gözükebilir. Başlangıçta oyunun prototiplemesinin yapılmasına karar verildi.
- 	
-*Sprint Review katılımcıları:* 
-- 	Ezgi Keserci
-- 	Muhammet Doğan
-- 	Taha Enes Kür
-- 	Berkay Toylan
+- **Sprint Review:** Alınan kararlar: Oyunun temel mekaniklerine karar verildi. Oyun uçan süpürge yarışı olacak. Android için yapılacak. Yatay ekranda olacak. Oyuncuya ek olarak AI yarışçılar olacak. Harita static yapıda olacak. Powerup’lar sayesinde değişik büyü yetenekleri kazanılacak ve bu büyüler saldırı ya da savunma şeklinde oyuncuya kısa süreliğine çeşitli avantajlar sağlayacak. Belki ekranın bazı yerlerinde yarışmacılara saldıran çeşitli düşmanlar da gözükebilir. Başlangıçta oyunun prototiplemesinin yapılmasına karar verildi.	
+
+   *Sprint Review katılımcıları:* Ezgi Keserci, Taha Enes Kür, Berkay Toylan, Muhammet Doğan
+   
 
 - **Sprint Retrospective:**
   - Bu sprintte daha hızlı çalışılması kararı alınmıştır.
