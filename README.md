@@ -64,7 +64,7 @@ https://miro.com/app/board/uXjVO3XkfcQ=/?share_link_id=952903156056
 - **Sprint Retrospective:**
   - Önümüzdeki sprintlerde daha hızlı çalışılması kararı alınmıştır.
   - Takım içindeki görev dağılımıyla ilgili düzenleme yapılması kararı alınmıştır.
-  - Geliştirme anında Discord üzerinden voice chat ile developerların birbirlerine destek olmasına kararı alınmıştır.
+  - Geliştirme anında Discord üzerinden voice chat ile developerların birbirlerine destek olması kararı alınmıştır.
   - Sprint backloglarındaki görevlerin daha detaylı düzenlenmesi kararı alınmıştır.
 
 **Diğer Notlar:**
