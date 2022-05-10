@@ -45,6 +45,14 @@ https://miro.com/app/board/uXjVO3XkfcQ=/?share_link_id=952903156056
 
 # Sprint 1
 - **Sprint Notları**: Oyunun genel hatları konuşulup kararlaştırıldı.
+
+**Sprint içinde tamamlanması tahmin edilen puan:** 85 Puan
+
+**Puan tamamlama mantığı:** Toplamda proje boyunca tamamlanması gereken ** puanlık backlog bulunmaktadır. 3 sprint'e bölündüğünde ilk sprint'in en azından 85 ile başlaması gerektiğine karar verildi.
+
+**Backlog düzeni ve Story seçimleri:** Backlog'umuz ilk yapılacak story'lere göre düzenlenmiştir. Sprint başına tahmin edilen puan sayısını geçmeyecek şekilde sıradan seçimler yapılmaktadır. Story başına çıkan tahmin puanı, toplam puanın yarısından az tutulmuştur.
+
+Story'ler yapılacak işlere (task'lere) bölünmüştür. Miro Board'da gözüken kırmızı item'lar yapılacak işleri (task) gösterirken, mavi item'lar story'leri temsil etmektedir.
  
 - **Backlog düzeni:** Backlog'umuz ilk yapılacak backloglara göre düzenlenmiştir.
  
