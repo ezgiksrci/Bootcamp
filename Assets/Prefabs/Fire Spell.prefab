@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2894580674251876972}
   - component: {fileID: 6305361456510777113}
   m_Layer: 0
-  m_Name: Fire
+  m_Name: Fire Spell
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -63,7 +63,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 323d371515efc624b9952cf5a30db4f6, type: 2}
+  - {fileID: 2100000, guid: 4f4ebdefe9b50434e98d75648e23b2fe, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
