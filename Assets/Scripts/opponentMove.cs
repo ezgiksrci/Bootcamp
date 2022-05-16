@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class movement : MonoBehaviour
+public class opponentMove : MonoBehaviour
 {
     private int posOffset = 2;      // Amount of movement when character switches
     private int pos = 0;            // -1: left, 0: middle(default); 1:right
@@ -27,14 +27,14 @@ public class movement : MonoBehaviour
         // Determines which line the player swipe
         if (LerpCount == 0)
         {
-            if (Input.GetKeyDown(KeyCode.A) && pos > -1)
+            if (Input.GetKeyDown(KeyCode.LeftArrow) && pos > -1)
             {
                 pos--;
                 sign = -1;
                 currPosX = r3D.position.x;
                 LerpCount++;
             }
-            else if (Input.GetKeyDown(KeyCode.D) && pos < 1)
+            else if (Input.GetKeyDown(KeyCode.RightArrow) && pos < 1)
             {
                 pos++;
                 sign = 1;
@@ -64,4 +64,32 @@ public class movement : MonoBehaviour
 
 
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Fire Spell"))
+
+        {
+            StartCoroutine(FireEffect());
+        }
+        else if (other.CompareTag("Ice Spell"))
+        {
+            StartCoroutine(IceEffect());
+        }
+    }
+
+    IEnumerator FireEffect()
+    {
+        speed = 5;
+        yield return new WaitForSeconds(3f);
+        speed = 10;
+    }
+
+    IEnumerator IceEffect()
+    {
+        speed = 0;
+        yield return new WaitForSeconds(3f);
+        speed = 10;
+    }
 }
+
