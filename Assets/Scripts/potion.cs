@@ -4,22 +4,19 @@ using UnityEngine;
 
 public class potion : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     private void OnTriggerEnter(Collider other)
     {
         Debug.Log("Cellat geldi!!!");
         if (other.gameObject.CompareTag("Player"))
+        {
+            Destroy(gameObject);
+        }
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        Debug.Log("Cellat geldi2");
+        if (collision.gameObject.CompareTag("Player"))
         {
             Destroy(gameObject);
         }
