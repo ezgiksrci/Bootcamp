@@ -12,4 +12,13 @@ public class potion : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        Debug.Log("Cellat geldi2");
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            Destroy(gameObject);
+        }
+    }
 }
