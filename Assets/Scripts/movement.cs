@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class movement : MonoBehaviour
 {
-    int posOffset = 2;      // Amount of movement when character switches
+    int posOffset = 1;      // Amount of movement when character switches
     int pos = 0;            // -1: left, 0: middle(default); 1:right
     int sign;               // Direction of movement
     public int speed = 1;   // Forward speed multiplayer
@@ -28,14 +28,14 @@ public class movement : MonoBehaviour
     {
         // Determines which line the player swipe
         if (LerpCount == 0) {
-            if (Input.GetKeyDown(KeyCode.A) && pos > -1)
+            if (Input.GetKey(KeyCode.A) && pos > -2)
             {
                 pos--;
                 sign = -1;
                 currPosX = r3D.position.x;
                 LerpCount++;
             }
-            else if (Input.GetKeyDown(KeyCode.D) && pos < 1)
+            else if (Input.GetKey(KeyCode.D) && pos < 2)
             {
                 pos++;
                 sign = 1;
