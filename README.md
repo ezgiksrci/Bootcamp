@@ -48,7 +48,7 @@ https://miro.com/app/board/uXjVO3XkfcQ=/?share_link_id=952903156056
 
 **Sprint içinde tamamlanması tahmin edilen puan:** 85 Puan
 
-**Puan tamamlama mantığı:** Toplamda proje boyunca tamamlanması gereken ** puanlık backlog bulunmaktadır. 3 sprint'e bölündüğünde ilk sprint'in en azından 85 ile başlaması gerektiğine karar verildi.
+**Puan tamamlama mantığı:** Toplamda proje boyunca tamamlanması gereken 275 puanlık backlog bulunmaktadır. 3 sprint'e bölündüğünde ilk sprint'in en azından 85 ile başlaması gerektiğine karar verildi.
 
 **Backlog düzeni ve Story seçimleri:** Backlog'umuz ilk yapılacak story'lere göre düzenlenmiştir. Sprint başına tahmin edilen puan sayısını geçmeyecek şekilde sıradan seçimler yapılmaktadır. Story başına çıkan tahmin puanı, toplam puanın yarısından az tutulmuştur.
 
@@ -80,3 +80,35 @@ Story'ler yapılacak işlere (task'lere) bölünmüştür. Miro Board'da gözük
 
 ![Oyun Mockup Çizimi](https://github.com/ezgiksrci/Bootcamp/blob/main/ProjectManagement/Sprint1Documents/Oyun_Mockup.jpeg)
 ![Oyun Özet Notları](https://github.com/ezgiksrci/Bootcamp/blob/main/ProjectManagement/Sprint1Documents/Oyun_Ozet.jpeg)
+
+--
+
+# Sprint 2
+- **Sprint Notları**: Temel oyun mekanikleri ve main menü oluşturuldu.
+
+**Sprint içinde tamamlanması tahmin edilen puan:** 90
+
+**Puan tamamlama mantığı:** Toplamda proje boyunca tamamlanması gereken 275 puanlık backlog bulunmaktadır. 3 sprint'e bölündüğünde ikinci sprint'in 90 puan olmasına karar verildi.
+
+**Backlog düzeni ve Story seçimleri:** Backlog'umuz ilk yapılacak story'lere göre düzenlenmiştir. Sprint başına tahmin edilen puan sayısını geçmeyecek şekilde sıradan seçimler yapılmaktadır. Story başına çıkan tahmin puanı, toplam puanın yarısından az tutulmuştur.
+
+Story'ler yapılacak işlere (task'lere) bölünmüştür. Miro Board'da gözüken kırmızı item'lar yapılacak işleri (task) gösterirken, mavi item'lar story'leri temsil etmektedir.
+ 
+- **Backlog düzeni:** Backlog'umuz ilk yapılacak backloglara göre düzenlenmiştir.
+ 
+- **Daily Scrum:** <https://github.com/ezgiksrci/Bootcamp/blob/main/ProjectManagement/Sprint2Documents/DailyScrum_WhatsApp2.txt> 
+ 
+- **Sprint board update:** Sprint board screenshotları: ![Backlog 2](https://github.com/ezgiksrci/Bootcamp/blob/main/ProjectManagement/Sprint2Documents/Backlog2.png)
+
+- **Ürün Durumu:** Ekran görüntüleri:
+![Product Screenshot 1](https://github.com/ezgiksrci/Bootcamp/blob/main/ProjectManagement/Sprint2Documents/Product_SS1.png)
+![Product Screenshot 2](https://github.com/ezgiksrci/Bootcamp/blob/main/ProjectManagement/Sprint2Documents/Product_SS1.png) 
+ 
+- **Sprint Review:** Alınan kararlar: Oyun mekaniğinin biraz daha serbest hale getirilmesine karar verildi. 
+   *Sprint Review katılımcıları:* Ezgi Keserci, Taha Enes Kür, Berkay Toylan, Muhammet Doğan
+
+- **Sprint Retrospective:**
+  -
+  
+**Diğer Notlar:**
+N/A
