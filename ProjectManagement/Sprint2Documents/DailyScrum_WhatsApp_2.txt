@@ -1,0 +1,251 @@
+5/11/22, 19:45 - Taha Enes Kür: İyi akşamlar arkadaşlar
+5/11/22, 19:45 - Taha Enes Kür: Nasılsınız nasıl gidiyor
+5/11/22, 19:46 - Berkay Toylan: ben şu particle sistemle uğraşıyorum ama kafayı yedircek bana
+5/11/22, 19:47 - Taha Enes Kür: Ya ben hastalıktan birkaç gündür bakamıyorum kusura bakmayın
+5/11/22, 19:47 - Taha Enes Kür: Yardımcı olamadığım için üzgünüm
+5/11/22, 19:47 - Berkay Toylan: sıkıntı yok ben de bişey yaptığımı söyleyemem uğraşıyorum sadece
+5/11/22, 19:47 - Taha Enes Kür: Bugünkü sprint buluşmasından sonra bakabiliriz beraber istersen
+5/11/22, 19:48 - Ezgi Keserci: ben de dün tekrar scrum dokümanıyla uğraştım sorun çıktı düzeltilmesi lazım dedi scrum asistanı bir ara backlogun tamamını belirlememiz gerekiyor bu seferlik kabul ediyorum dedi
+5/11/22, 19:48 - Taha Enes Kür: Bütün backlogu mu istiyormuş
+5/11/22, 19:48 - Ezgi Keserci: noktalama işaretlerinin faydaları adlı çalışmam :D
+5/11/22, 19:48 - Berkay Toylan: skdfsdk
+5/11/22, 19:49 - Ezgi Keserci: evet tüm backlogun puanları lazımmış
+5/11/22, 19:49 - Taha Enes Kür: Hemen mi istiyor yoksa sprint sonuna kadar vaktimiz var mı
+5/11/22, 19:50 - Ezgi Keserci: diğer kontrol 2. sprint sonu olur yani sprint sonu evet
+5/11/22, 19:50 - Taha Enes Kür: Ok o zaman
+5/11/22, 19:50 - Taha Enes Kür: Aşağı yukarı ne yapacağımız belli zorlanmayız herhalde
+5/11/22, 19:51 - Ezgi Keserci: muhammet işleri daha fazla parçaya ayırıp iş listesi çıkarabilse çok iyi olurdu aslında ona göre puanlama, burndown chart vs. yapılır
+5/11/22, 19:51 - Ezgi Keserci: tekrardan geçmiş olsun bu arada
+5/11/22, 19:53 - Taha Enes Kür: Sağolun eksik olmayın :)
+5/11/22, 19:53 - Ezgi Keserci: bugün ai için asset storeda güzel bir paket buldum aslında ama çok karışık geldi projemize nasıl implemente ederiz bilemiyorum beraber bakarız isterseniz
+5/11/22, 19:54 - Taha Enes Kür: Olur
+5/11/22, 19:55 - Berkay Toylan: atsana discordtan bakayım bi ara
+5/11/22, 19:59 - Ezgi Keserci: attım
+5/11/22, 19:59 - Ezgi Keserci: arabaları uçan süpürgeli cadıya cevirsek güzel olur aslında
+5/11/22, 19:59 - Berkay Toylan: bakıcam birazdan
+5/11/22, 19:59 - Ezgi Keserci: tamamdır
+5/11/22, 20:06 - Taha Enes Kür: Ezgi sana assistandan puan geri dönüşü olmuş muydu
+5/11/22, 20:07 - Ezgi Keserci: 8 üzerinden 8
+5/11/22, 20:07 - Taha Enes Kür: Wow
+5/11/22, 20:07 - Taha Enes Kür: Eksiğimizin olmasına rağmen gayet iyi
+5/11/22, 20:09 - Ezgi Keserci: tek eksik şu anda backlogun toplam puanı diye bu sprintlik kabul etti asistan
+5/11/22, 20:29 - Muhammet Doğan: Hımm tamam yaparım sabah sorun olmaz
+5/11/22, 20:29 - Muhammet Doğan: Güzel 😂😂
+5/13/22, 19:28 - Berkay Toylan: arkadaşlar 2 gündür kimseden ses çıkmıyo noldu? ajksfnfan
+5/13/22, 19:35 - Muhammet Doğan: 😂
+5/13/22, 19:35 - Muhammet Doğan: Ne olsun çalışmaya devam
+5/13/22, 19:37 - Muhammet Doğan: Ben map için aset buldum bu gün örnek çalışma denemeleri yapıcam yarın da giti bağlayıp çalışırım
+5/13/22, 19:37 - Muhammet Doğan: Sizde nasıl gidiyor
+5/13/22, 20:08 - Taha Enes Kür: Ben yine hastalığımdan dolayı bakamadım 😂
+5/13/22, 20:08 - Taha Enes Kür: Ama bu akşam başlamayı düşünüyorum
+5/13/22, 20:09 - Taha Enes Kür: Bakmamı istediğiniz bir konu var mı
+5/13/22, 20:12 - Muhammet Doğan: Berkay büyü bakıyordu yanlış hatıtlamıyorsam sen de iksir e bakabilirsin istersen
+5/13/22, 20:18 - Ezgi Keserci: movement'ı değiştirecektin enes sen galiba
+5/13/22, 20:18 - Ezgi Keserci: ben de büyü atma sistemi için bir şeyler denedim
+5/13/22, 20:23 - Taha Enes Kür: İyi ki hatırlattın, aklımdan çıkmış
+5/13/22, 20:24 - Taha Enes Kür: @Berkay hareket serbest olacak demiştik en son, değil mi
+5/13/22, 20:24 - Berkay Toylan: aynen daha iyi olur bence
+5/13/22, 20:25 - Taha Enes Kür: Tamamdır, bir de yol virajlı olacak demiştik yanlış hatırlamıyorsam
+5/13/22, 20:26 - Berkay Toylan: ona ben bakabilirim istensen
+5/13/22, 20:26 - Berkay Toylan: ama deneme amaçlı sonuna bi viraj koy sen
+5/13/22, 20:26 - Taha Enes Kür: Onu da yine movement scriptinde halletmek gerekir
+5/13/22, 20:27 - Taha Enes Kür: Ama dediğin gibi yapalım
+5/13/22, 20:29 - Taha Enes Kür: Benim commit ile senin commiti merge edecek miyiz peki
+5/13/22, 20:30 - Taha Enes Kür: Yoksa direk senin commiti pull yapıp devam edeyim mi
+5/13/22, 20:30 - Berkay Toylan: benimkinde devam et ya sonra merge ederiz
+5/13/22, 20:30 - Taha Enes Kür: Tamamdır
+5/13/22, 21:37 - Taha Enes Kür: @Berkay branchini fetchleyim dedim 1.63 Gb indirdi, bu normal mi
+5/13/22, 21:38 - Taha Enes Kür: Bu kadar büyük ne var ki
+5/13/22, 21:38 - Berkay Toylan: ben onu yanlışlıkla 2 kere pushlamış olabilirim
+5/13/22, 21:39 - Berkay Toylan: gerçi proje 5 gb bende de
+5/13/22, 21:39 - Berkay Toylan: ama
+5/13/22, 21:39 - Berkay Toylan: o kadar etmemesi lazım aslında
+5/13/22, 21:39 - Taha Enes Kür: Benim branchde de aynı sıkıntı var mıydı
+5/13/22, 21:40 - Berkay Toylan: valla hiç bakmadım boyutuna
+5/13/22, 21:41 - Taha Enes Kür: Benim master branchini zip olarak indireyim dedim sadece 2 mb tuttu :D
+5/13/22, 21:42 - Berkay Toylan: lasdknf
+5/13/22, 21:46 - Taha Enes Kür: Bunu çözmemiz lazım yoksa build alırken sıkıntı çıkacak :D
+5/13/22, 21:46 - Taha Enes Kür: Yani bi terrain ile bi cadı assetinin bu kadar tutmamadı lazımdı :D
+5/13/22, 21:47 - Berkay Toylan: fazlalık assetler var onları silerim hep
+5/13/22, 21:47 - Taha Enes Kür: Ya da böyle olması gerekiyordur, bilemiyorum
+5/13/22, 22:24 - Taha Enes Kür: @Berkay Sanırım projeyi 2021.3.2f1 sürümünde derlemişsin
+5/13/22, 22:25 - Taha Enes Kür: Ama en başta 2021.3.1f1 sürümü için anlaşmıştıl
+5/13/22, 22:25 - Taha Enes Kür: .2f1 e geçelim o zaman
+5/13/22, 22:55 - Taha Enes Kür: Bu arada githubda master ile feat branchlerini merge edemiyorum
+5/13/22, 22:55 - Taha Enes Kür: Tamamen farklı commit geçmişleri var diyor
+5/13/22, 22:56 - Taha Enes Kür: Muhtemelen feat, master ın bi branchi bile değil
+5/14/22, 13:36 - Ezgi Keserci: üzerinden branch açmadan direkt indirip yaptı galiba o yüzden
+5/14/22, 13:37 - Ezgi Keserci: localde kendime feat üzerinden branch açtım ben de bu yüzden
+5/14/22, 14:00 - Taha Enes Kür: Ben de öyle yaptım
+5/14/22, 14:01 - Taha Enes Kür: Hatta deneme amaçlı push yaptım, bundan sonra feat üzerinden devam edicez gibi
+5/14/22, 14:02 - Ezgi Keserci: tamam ama boyutunu da düzenlemek lazım dediğin gibi çok büyük şu anda
+5/14/22, 14:03 - Ezgi Keserci: bi de bu büyü işi iksir sayısına göre kazanılan büyü çeşitleri yerine mesela kalkan icon'u alınca kalkan büyüsü aktiflesse daha iyi olmaz mı
+5/14/22, 14:03 - Ezgi Keserci: sayılar üzerinden yaptım ama pek içime sinmedi
+5/14/22, 14:06 - Taha Enes Kür: Aynen boyutu da halletmek gerekiyor
+5/14/22, 14:07 - Taha Enes Kür: İksirler aktif, kalkan pasif olabilir
+5/14/22, 14:18 - Muhammet Doğan: Kalkan iksiri ayrı olsun diyorsunuz hımm düşünmek lazım
+5/14/22, 14:19 - Muhammet Doğan: Size yük olmazsa yaparız derseniz bir şey demem
+5/14/22, 14:19 - Muhammet Doğan: Ama satılar ile yapılmışsa öyle kalsa da olur benim için
+5/14/22, 14:34 - Ezgi Keserci: muhammet backlog işine bakabildin mi
+5/14/22, 14:35 - Ezgi Keserci: örnek bi backlog atayım mı
+5/14/22, 14:35 - Ezgi Keserci: görmek istersen
+5/14/22, 14:37 - Ezgi Keserci: <Media omitted>
+5/14/22, 17:17 - Muhammet Doğan: Yok daha bakamadım
+5/14/22, 17:17 - Muhammet Doğan: Dışardayım
+5/14/22, 17:17 - Muhammet Doğan: Bu 2 gün yoğun geçecek biraz
+5/14/22, 18:21 - Ezgi Keserci: tamamdır
+5/16/22, 10:40 - Ezgi Keserci: arkadaşlar nasılsınız neler yapıyorsunuz
+5/16/22, 11:01 - Muhammet Doğan: İyiyim siz nasılsınız
+5/16/22, 11:02 - Muhammet Doğan: 2 günlük yoğunluğun yorgunluğunu atıyorum
+5/16/22, 11:02 - Muhammet Doğan: 😂
+5/16/22, 11:52 - Taha Enes Kür: Hastalığı atlattım sanırım, bu sefer tam gaz başlayacağım :)
+5/16/22, 11:53 - Taha Enes Kür: Siz naptınız nasılsınız
+5/16/22, 13:30 - Ezgi Keserci: iyileşmene sevindim enes :) benim de unity learn çalışarak geçti son günlerim
+5/16/22, 13:31 - Ezgi Keserci: berkay sen nasılsın neler yapıyorsun
+5/16/22, 14:14 - Muhammet Doğan: Bu arada arkadaşlar çarşamba müsait misiniz İstanbul a geliyorum
+5/16/22, 14:14 - Muhammet Doğan: Görüşebiliriz
+5/16/22, 14:15 - Muhammet Doğan: Çarşamba 16 ten sonra doluyum gibi öncesinde görüşebiliriz
+5/16/22, 14:50 - Berkay Toylan: 2 gün sonra yani ?
+5/16/22, 14:51 - Muhammet Doğan: Aynen
+5/16/22, 14:51 - Berkay Toylan: ben uygunum
+5/16/22, 15:10 - Muhammet Doğan: Tamamdır
+5/16/22, 15:10 - Muhammet Doğan: Ezgi sen boş musun
+5/16/22, 15:13 - Ezgi Keserci: ben de uygunum
+5/16/22, 15:14 - Berkay Toylan: kaçta nerde buluşalım ?
+5/16/22, 15:14 - Ezgi Keserci: muhammet sen nereye geliyosun istanbulda
+5/16/22, 15:19 - Muhammet Doğan: Eminönü gelicem
+5/16/22, 15:19 - Muhammet Doğan: Kaç derseniz bende ona göre bilet alıcam
+5/16/22, 15:21 - Ezgi Keserci: tamam o zaman Eminönü civarı bi kahvecide otururuz isterseniz
+5/16/22, 15:21 - Ezgi Keserci: 1 nasıl
+5/16/22, 15:23 - Berkay Toylan: olur yerde bak istersen
+5/16/22, 15:32 - Ezgi Keserci: sen neredeydin berkay senin için de kolay bi güzergahta olsun
+5/16/22, 15:32 - Berkay Toylan: ben şişlideyim
+5/16/22, 15:33 - Berkay Toylan: metroyla gelebilirim heryere
+5/16/22, 15:33 - Ezgi Keserci: tamamdır
+5/16/22, 15:37 - Ezgi Keserci: https://goo.gl/maps/J3xbZfCyTCySKEbS6
+5/16/22, 15:37 - Ezgi Keserci: direkt eminönü tarafları olmasın oralar çok kalabalık oluyo çünkü burası eminönüne de yakın tramvayla uygun mudur
+5/16/22, 15:38 - Berkay Toylan: olur ama ben galataporta gittim 2-3hafta önce hiç bi kafede oturmaya yer yoktu
+5/16/22, 15:38 - Ezgi Keserci: öyle mi ben gördüğümde sakindi aslında bayramda ya da hafta sonu muydu sen gittiğinde
+5/16/22, 15:39 - Berkay Toylan: hafta sonu heralde
+5/16/22, 15:39 - Ezgi Keserci: kalabalık oluyosa başka yer de bulabiliriz ama
+5/16/22, 15:39 - Berkay Toylan: neyse orada buluşuruz duruma göre bakarız
+5/16/22, 15:39 - Ezgi Keserci: tamamdır
+5/16/22, 15:42 - Muhammet Doğan: 👍🏻
+5/16/22, 16:29 - Taha Enes Kür: Arkadaşlar
+5/16/22, 16:29 - Taha Enes Kür: Müsait olan discord grubuna bi gelebilir mi? Bir şey danışmak istiyorum
+5/17/22, 11:07 - Muhammet Doğan: <Media omitted>
+5/17/22, 11:07 - Muhammet Doğan: Nasıl olmuş arkadaşlar
+5/17/22, 11:09 - Muhammet Doğan: Birde map i yuvarlak hale getirip turlu mu yapalım yoksa tek tur uzun map mi olsun nasıl bir şey isterseniz hangisi daha iyi olur
+5/17/22, 11:36 - Ezgi Keserci: bence turlu olsun
+5/17/22, 11:36 - Ezgi Keserci: güzel olmuş ellerine sağlık
+5/17/22, 11:37 - Taha Enes Kür: Tur olayını hallettim sanırım ben
+5/17/22, 11:37 - Taha Enes Kür: Ellerine sağlık
+5/17/22, 11:37 - Ezgi Keserci: movement için mi diyorsun
+5/17/22, 11:37 - Taha Enes Kür: Aynen
+5/17/22, 11:38 - Taha Enes Kür: Artık parkurun düz olmasına gerek yok
+5/17/22, 11:38 - Ezgi Keserci: oo ellerine sağlık
+5/17/22, 11:38 - Taha Enes Kür: İstediğimiz gibi bükebiliriz
+5/17/22, 11:38 - Taha Enes Kür: Teşekkürler :)
+5/17/22, 11:42 - Muhammet Doğan: Harika
+5/17/22, 11:42 - Muhammet Doğan: Ellerine sağlık
+5/17/22, 11:42 - Muhammet Doğan: Eyvallah
+5/17/22, 11:42 - Muhammet Doğan: Eyvallah
+5/18/22, 11:52 - Muhammet Doğan: Arkadaşlar ben geldim
+5/18/22, 11:52 - Muhammet Doğan: Eminönü'ndeyim şuan
+5/18/22, 12:05 - Berkay Toylan: ben yarım saate falan gelirim
+5/18/22, 12:08 - Muhammet Doğan: Tamamdır nerde bekliyim
+5/18/22, 12:11 - Berkay Toylan: ezginin attığı adrese geç istersen
+5/18/22, 12:14 - Ezgi Keserci: ben biraz gecikicem gibi görünüyor
+5/18/22, 12:27 - Muhammet Doğan: Ezgi bunu tekrar atar mısın
+5/18/22, 12:28 - Ezgi Keserci: Kılıçali Paşa Mah. Meclis-i Mebusan Cad. No:8/7B Galataport, 34433 Beyoğlu/İstanbul
+5/18/22, 12:28 - Ezgi Keserci: galataport starbucks
+5/18/22, 12:30 - Muhammet Doğan: 👍🏻
+5/18/22, 12:52 - Berkay Toylan: starbucksı bulamadım yav
+5/18/22, 12:53 - Muhammet Doğan: Bende
+5/18/22, 12:53 - Muhammet Doğan: 😂😂
+5/18/22, 12:56 - Muhammet Doğan: Buldum şuan
+5/18/22, 12:56 - Ezgi Keserci: galata porta geldiyseniz ortak başka yere geçin isterseniz
+5/18/22, 12:57 - Muhammet Doğan: J1 ofislerinin sonunda
+5/18/22, 12:57 - Muhammet Doğan: Nerdesin berkay
+5/18/22, 12:58 - Berkay Toylan: kahve dünyasının oradayım
+5/18/22, 12:58 - Muhammet Doğan: Geleyim istersen oraya
+5/18/22, 12:58 - Berkay Toylan: buldum şikdi
+5/18/22, 12:59 - Berkay Toylan: mavi gömlek var üstümde
+5/18/22, 12:59 - Muhammet Doğan: Üstinde ne var
+5/18/22, 13:05 - Muhammet Doğan: Ezgi biz bulduk birbirimizi sen nerdesin
+5/18/22, 13:06 - Ezgi Keserci: yürüyorum oraya
+5/18/22, 13:09 - Muhammet Doğan: Tamamdır
+5/18/22, 13:09 - Ezgi Keserci: neredesiniz
+5/18/22, 13:09 - Muhammet Doğan: İçerdetiz
+5/18/22, 13:21 - Taha Enes Kür: Buluşabildiniz mi
+5/18/22, 13:25 - Ezgi Keserci: buluştuk evet
+5/18/22, 13:32 - Taha Enes Kür: İyi eğlenceler
+5/18/22, 15:16 - Muhammet Doğan: Eyvallah
+5/19/22, 11:12 - Ezgi Keserci: Muhammet backlog'u ne zaman hazırlayabilirsin 2. sprint 22 mayısta bitiyor full backlog'a ihtiyacımız var
+5/19/22, 11:14 - Ezgi Keserci: <Media omitted>
+5/19/22, 12:08 - Muhammet Doğan: Yarın halketmiş olurum muhtemelen
+5/19/22, 15:30 - Taha Enes Kür: Nasıl gidiyor arkadaşlar
+5/19/22, 15:31 - Ezgi Keserci: backlog yazdım biraz şimdi de main menü yapıyorum farklı bir scenede çalışmak adına
+5/19/22, 15:31 - Ezgi Keserci: sizde nasıl gidiyor
+5/19/22, 15:36 - Taha Enes Kür: Ben de karakter hareketini tamamlamıştım işte
+5/19/22, 15:36 - Taha Enes Kür: Kanbana bakıyorum başka ne yapabilirim diye
+5/19/22, 15:37 - Berkay Toylan: şu son commitlediğin githuba tamamlanmıd hali mi?
+5/19/22, 15:37 - Taha Enes Kür: Temel olarak tamamlanmış hali
+5/19/22, 15:37 - Ezgi Keserci: kanban düzenlenmesi gerekiyor ama istersen yazdığım backlogu buraya atayım şu anki halini
+5/19/22, 15:39 - Berkay Toylan: yav ben büyü falan bakıyorum da bu indirdiğim explosionlar falan built in render pipeline onları bizim projede kullanamıyoruz
+5/19/22, 15:39 - Taha Enes Kür: İsterseniz discorddan son halini gösterebilirim size
+5/19/22, 15:39 - Berkay Toylan: olur
+5/19/22, 15:39 - Ezgi Keserci: tamam ben de geliyorum
+5/19/22, 15:39 - Taha Enes Kür: Evet ben urp açmıştım projeyi
+5/19/22, 15:39 - Taha Enes Kür: Ama explosion da temelinde sprite değil mi
+5/19/22, 15:40 - Muhammet Doğan: Ben gelemeyeceğim dışardayım arkadaşlar
+5/20/22, 15:16 - Muhammet Doğan: <Media omitted>
+5/20/22, 15:16 - Muhammet Doğan: Arkadaşlar backlogu toparladım ezginin attığı dosyaya göre
+5/20/22, 15:16 - Muhammet Doğan: Ezgi bir kaç sorum olucak
+5/20/22, 15:17 - Muhammet Doğan: Sprint 1 de başlıkları kaldırmışsın açıklama koymuşsun böyle mi olması gerekiyormuş
+5/20/22, 15:17 - Muhammet Doğan: This message was deleted
+5/20/22, 15:18 - Muhammet Doğan: Timer olmasa da olur bence ondan yeşil renkli mapi bitirsinler yeter
+5/20/22, 15:20 - Muhammet Doğan: Kırmızılar sprint 1 de vardı zaten sarıları ekledim
+5/20/22, 15:22 - Muhammet Doğan: https://youtu.be/SzOYNXQC5Ls
+5/20/22, 15:22 - Muhammet Doğan: Rakip yarışçılar için aı den böyle bir şey yapabiliriz
+5/20/22, 15:23 - Muhammet Doğan: Arkadaşlar
+5/20/22, 17:30 - Muhammet Doğan: Arkadaşlar bizim proje kaç gb acaba
+5/20/22, 17:30 - Berkay Toylan: bendeki 5gb
+5/20/22, 17:31 - Muhammet Doğan: Tamamdır
+5/20/22, 17:39 - Ezgi Keserci: Evet, böyle olması gerekiyormuş
+5/20/22, 17:40 - Ezgi Keserci: Tamam, diğer arkadaşlar ne diyor ona göre de bir konuşuruz müsait olduğunuzda
+5/20/22, 17:42 - Muhammet Doğan: Hımm tamam 2 yi toparlarım o zaman öyle
+5/20/22, 17:42 - Ezgi Keserci: kanban board'a bakınca ne iş yapılacağını ilk bakışta anlamamız gerekiyor arayüz 3 diyince ne yapılacak anlamak için içine girip okumak gerekiyor işi yeterince iyi anlatmıyor çünkü
+5/20/22, 17:43 - Ezgi Keserci: burndown chart'ı sen mi değiştirdin bu arada
+5/20/22, 17:43 - Muhammet Doğan: Ezgi sendeki proje kaç gb en son den güncellemişsin git hub ı senden indiyorum
+5/20/22, 17:43 - Muhammet Doğan: Yok hayır dokunmadım ona
+5/20/22, 17:43 - Ezgi Keserci: benden indirme ben kendi branch'imden ilerledim
+5/20/22, 17:43 - Ezgi Keserci: ama asıl kodlama işlerini enes yürütüyor
+5/20/22, 17:44 - Ezgi Keserci: o yüzden proje zaten enesin ve berkayın dosyaları üzerine şekillenecek
+5/20/22, 17:45 - Muhammet Doğan: 👍🏻
+5/20/22, 19:35 - Taha Enes Kür: Müsaitseniz bu akşam buluşup son durumu konuşalım
+5/20/22, 19:35 - Taha Enes Kür: Bir de backlog a son şeklini verelim artık
+5/20/22, 19:36 - Berkay Toylan: olur
+5/20/22, 19:36 - Taha Enes Kür: Son sprinte güçlü girmemiz gerekiyor
+5/20/22, 19:36 - Berkay Toylan: ben uygunum
+5/20/22, 20:04 - Ezgi Keserci: saat kaç gibi
+5/20/22, 20:05 - Muhammet Doğan: Uyar
+5/20/22, 20:05 - Berkay Toylan: 20. 30 olur mu
+5/20/22, 20:05 - Taha Enes Kür: 9a doğru yapalım mı
+5/20/22, 20:05 - Berkay Toylan: tamam
+5/20/22, 20:05 - Ezgi Keserci: tamam uyar bana da
+5/20/22, 20:05 - Muhammet Doğan: Tamamdır olur
+5/20/22, 21:03 - Ezgi Keserci: berkay geliyor musun
+5/20/22, 21:43 - Ezgi Keserci: muhammet sesin gelmiyor
+5/20/22, 21:45 - Ezgi Keserci: bu
+5/20/22, 22:10 - Muhammet Doğan: Arkadaşlar ben iyice problem yaşıyorum sistem de o yüzden çıkıyorum
+5/20/22, 22:10 - Muhammet Doğan: Genel gerekli olan şeyleri yazarsanız ben onları yaparım
+5/20/22, 22:10 - Muhammet Doğan: Sesinizi bir çok yerde alamadım ne yazık ki
+5/20/22, 22:11 - Muhammet Doğan: Herkese hayırlı geceler
+5/20/22, 22:12 - Muhammet Doğan: Gerçi beb birazdan Türk Telekoma sağlam bir şikayet yazarım bu sinirle hayırlı mı olur hayırsız mı okur onu bilemiyorum
+5/20/22, 22:12 - Muhammet Doğan: 😒😒
+5/20/22, 22:12 - Taha Enes Kür: Sen yine de soğukkanlılığını yitirme 😅
+5/20/22, 22:12 - Taha Enes Kür: İyi geceler sana da
+5/20/22, 22:15 - Muhammet Doğan: 😂
+5/20/22, 22:17 - Ezgi Keserci: 😅 iyi geceler muhammet
+5/20/22, 22:18 - Berkay Toylan: iyigeceler
