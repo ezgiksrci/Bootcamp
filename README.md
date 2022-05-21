@@ -98,11 +98,11 @@ Story'ler yapılacak işlere (task'lere) bölünmüştür. Miro Board'da gözük
  
 - **Daily Scrum:** <https://github.com/ezgiksrci/Bootcamp/blob/main/ProjectManagement/Sprint2Documents/DailyScrum_WhatsApp2.txt> 
  
-- **Sprint board update:** Sprint board screenshotları: ![Backlog 2](https://github.com/ezgiksrci/Bootcamp/blob/main/ProjectManagement/Sprint2Documents/Backlog2.png)
+- **Sprint board update:** Sprint board screenshotları: ![Backlog 2](https://github.com/ezgiksrci/Bootcamp/blob/main/ProjectManagement/Sprint2Documents/backlog2.png)
 
 - **Ürün Durumu:** Ekran görüntüleri:
-![Product Screenshot 1](https://github.com/ezgiksrci/Bootcamp/blob/main/ProjectManagement/Sprint2Documents/Product_SS1.png)
-![Product Screenshot 2](https://github.com/ezgiksrci/Bootcamp/blob/main/ProjectManagement/Sprint2Documents/Product_SS1.png) 
+![Product Screenshot 1](https://github.com/ezgiksrci/Bootcamp/blob/main/ProjectManagement/Sprint2Documents/Product_SS1.jpeg)
+![Product Screenshot 2]() 
  
 - **Sprint Review:** Alınan kararlar: Oyun mekaniğinin biraz daha serbest hale getirilmesine karar verildi. 
    *Sprint Review katılımcıları:* Ezgi Keserci, Taha Enes Kür, Berkay Toylan, Muhammet Doğan
