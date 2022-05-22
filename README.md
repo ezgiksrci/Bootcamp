@@ -81,7 +81,7 @@ Story'ler yapılacak işlere (task'lere) bölünmüştür. Miro Board'da gözük
 ![Oyun Mockup Çizimi](https://github.com/ezgiksrci/Bootcamp/blob/main/ProjectManagement/Sprint1Documents/Oyun_Mockup.jpeg)
 ![Oyun Özet Notları](https://github.com/ezgiksrci/Bootcamp/blob/main/ProjectManagement/Sprint1Documents/Oyun_Ozet.jpeg)
 
---
+---
 
 # Sprint 2
 - **Sprint Notları**: Temel oyun mekanikleri ve main menü oluşturuldu.
@@ -113,4 +113,4 @@ Story'ler yapılacak işlere (task'lere) bölünmüştür. Miro Board'da gözük
   -
   
 **Diğer Notlar:**
-N/A
+- N/A
