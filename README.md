@@ -102,7 +102,9 @@ Story'ler yapılacak işlere (task'lere) bölünmüştür. Miro Board'da gözük
 
 - **Ürün Durumu:** Ekran görüntüleri:
 ![Product Screenshot 1](https://github.com/ezgiksrci/Bootcamp/blob/main/ProjectManagement/Sprint2Documents/Product_SS1.jpeg)
-![Product Screenshot 2]() 
+![Product Screenshot 2](https://github.com/ezgiksrci/Bootcamp/blob/main/ProjectManagement/Sprint2Documents/Product_SS2.png) 
+![Product Screenshot 3](https://github.com/ezgiksrci/Bootcamp/blob/main/ProjectManagement/Sprint2Documents/Product_SS3.png)
+![Product Screenshot 4](https://github.com/ezgiksrci/Bootcamp/blob/main/ProjectManagement/Sprint2Documents/Product_SS4.png)
  
 - **Sprint Review:** Alınan kararlar: Oyun mekaniğinin biraz daha serbest hale getirilmesine karar verildi. 
    *Sprint Review katılımcıları:* Ezgi Keserci, Taha Enes Kür, Berkay Toylan, Muhammet Doğan
