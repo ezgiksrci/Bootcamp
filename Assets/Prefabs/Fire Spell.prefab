@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2894580674251876973}
   - component: {fileID: 2894580674251876972}
   - component: {fileID: 6305361456510777113}
+  - component: {fileID: -4495663564656082308}
   m_Layer: 0
   m_Name: Fire Spell
   m_TagString: Fire Spell
@@ -114,3 +115,22 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &-4495663564656082308
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2894580674251876947}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4495a12a51670d4ca37c646dfc67b07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  routes:
+  - {fileID: 4009015854564569198, guid: f8c9aa17e93cdb14b92c31b81e933027, type: 3}
+  - {fileID: 4273988619486581197, guid: 451c0ab2c95013142919b1bfba62337c, type: 3}
+  - {fileID: 80780954107165601, guid: 96a1e70f6c9aadc4882019a25139f4b5, type: 3}
+  - {fileID: 2235565002762160351, guid: fc3e25ff48f68784c85e9b569ba8d72c, type: 3}
+  - {fileID: 853508841744524604, guid: 02ecce92e1a560b4ba25d36bd66554b2, type: 3}
+  pos: 0

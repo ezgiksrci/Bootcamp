@@ -7,6 +7,10 @@ TagManager:
   - Potion
   - Ice Spell
   - Fire Spell
+  - Shield Spell
+  - Fire Potion
+  - Ice Potion
+  - Shield Potion
   layers:
   - Default
   - TransparentFX

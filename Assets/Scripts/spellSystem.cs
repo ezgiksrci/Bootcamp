@@ -15,22 +15,26 @@ public class spellSystem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && collectibles.potionNum == 1)
+        if (Input.GetKeyDown(KeyCode.Space) && collectibles.fireSpell)
         {
-            Rigidbody rb = Instantiate(speellList[0], transform.position + Vector3.forward, Quaternion.identity).GetComponent<Rigidbody>();
-            rb.AddForce(transform.forward * 25f, ForceMode.Impulse);
-            collectibles.potionNum--;
+            Debug.Log("Ateþ aktif");
+            Instantiate(speellList[0], transform.position + transform.forward + transform.up, Quaternion.identity);
+            collectibles.fireSpell = false;
+            collectibles.imageList[0].SetActive(false);
         }
-        else if (Input.GetKeyDown(KeyCode.Space) && collectibles.potionNum == 2)
+        else if (Input.GetKeyDown(KeyCode.Space) && collectibles.iceSpell)
         {
-            Rigidbody rb = Instantiate(speellList[1], transform.position + Vector3.forward, Quaternion.identity).GetComponent<Rigidbody>();
-            rb.AddForce(transform.forward * 25f, ForceMode.Impulse);
-            collectibles.potionNum -=2;
+            Debug.Log("Buz aktif");
+            Instantiate(speellList[1], transform.position + transform.forward + transform.up, Quaternion.identity);
+            collectibles.iceSpell = false;
+            collectibles.imageList[1].SetActive(false);
         }
-        else if (Input.GetKeyDown(KeyCode.Space) && collectibles.potionNum == 3)
+        else if (Input.GetKeyDown(KeyCode.Space) && collectibles.shieldSpell)
         {
             Debug.Log("Kalkan aktif");
-            collectibles.potionNum -= 3;
+            Instantiate(speellList[2], transform.position + transform.forward + transform.up, Quaternion.identity);
+            collectibles.shieldSpell = false;
+            collectibles.imageList[2].SetActive(false);
         }
     }
 }

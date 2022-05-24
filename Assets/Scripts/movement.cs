@@ -36,14 +36,14 @@ public class movement : MonoBehaviour
         }
         
         // Firing
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            if (collectibles.potionNum > 0) 
-            {
-                Rigidbody rb = Instantiate(fire, transform.position + transform.forward, Quaternion.identity).GetComponent<Rigidbody>();
-                collectibles.potionNum--;
-            }
-            
-        }
+        //if (Input.GetKeyDown(KeyCode.Space))
+        //{
+        //    if (collectibles.potionNum > 0) 
+        //    {
+        //        Rigidbody rb = Instantiate(fire, transform.position + transform.forward, Quaternion.identity).GetComponent<Rigidbody>();
+        //        collectibles.potionNum--;
+        //    }
+        //    
+        //}
     }
 }
