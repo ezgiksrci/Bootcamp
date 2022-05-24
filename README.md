@@ -110,7 +110,7 @@ Story'ler yapılacak işlere (task'lere) bölünmüştür. Miro Board'da gözük
    *Sprint Review katılımcıları:* Ezgi Keserci, Taha Enes Kür, Berkay Toylan, Muhammet Doğan
 
 - **Sprint Retrospective:**
-  -
+  - Sprint backlogundaki görevlerin paylaşımının daha iyi yapılması kararı alınmıştır. 
   
 **Diğer Notlar:**
 - N/A
