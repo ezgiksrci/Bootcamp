@@ -6,6 +6,7 @@ public class spellSystem : MonoBehaviour
 {
     collectibles collectibles;
     [SerializeField] List<GameObject> speellList;
+    [SerializeField] GameObject Shield;
     // Start is called before the first frame update
     void Start()
     {
@@ -32,7 +33,8 @@ public class spellSystem : MonoBehaviour
         else if (Input.GetKeyDown(KeyCode.Space) && collectibles.shieldSpell)
         {
             Debug.Log("Kalkan aktif");
-            Instantiate(speellList[2], transform.position + transform.forward + transform.up, Quaternion.identity);
+            Shield.SetActive(true);
+            //Instantiate(speellList[2], transform.position + transform.forward + transform.up, Quaternion.identity);
             collectibles.shieldSpell = false;
             collectibles.imageList[2].SetActive(false);
         }

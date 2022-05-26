@@ -2,94 +2,208 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// !!! Multiplayer özelliði geldiði zaman deðiþtirilecek !!!
+
 public class opponentMove : MonoBehaviour
 {
-    private int posOffset = 2;      // Amount of movement when character switches
-    private int pos = 0;            // -1: left, 0: middle(default); 1:right
-    private int sign;               // Direction of movement
-    private int LerpRatio = 45;
-    private int LerpCount = 0;      // For Lerp operation 
-    private float currPosX;         // Holds X position before lerping
-    public int speed = 1;           // Forward speed multiplayer
+    [SerializeField] private Transform[] routes;
+    [SerializeField] public static int pos, posFrom;
+    [SerializeField] private float speedModifier;
+    [SerializeField] GameObject iceTrap;
+    
+    public static int routeToGo;
+    public static float tParam, tParamNext;
+    public static Vector3 objectPosition, objectPositionNext;
+    private bool coroutineAllowed, isSwiping;
+    int LerpRatio = 45,
+        LerpCount = 0;      // For Lerp operation
 
-    private Animator anim;
-    private Vector3 charPos;
-    private Rigidbody r3D;
     void Start()
     {
-        charPos = transform.position;
-        anim = GetComponent<Animator>();
-        r3D = GetComponent<Rigidbody>();
+        pos = 0;
+        posFrom = pos;
+        routeToGo = 1;
+        tParam = 0f;
+        tParamNext = 0f;
+        speedModifier = 0.25f;
+        coroutineAllowed = true;
+        isSwiping = false;
     }
 
     void Update()
     {
-        // Determines which line the player swipe
-        if (LerpCount == 0)
+        if (coroutineAllowed)
         {
-            if (Input.GetKeyDown(KeyCode.LeftArrow) && pos > -1)
-            {
-                pos--;
-                sign = -1;
-                currPosX = r3D.position.x;
-                LerpCount++;
-            }
-            else if (Input.GetKeyDown(KeyCode.RightArrow) && pos < 1)
-            {
-                pos++;
-                sign = 1;
-                currPosX = r3D.position.x;
-                LerpCount++;
-            }
+            StartCoroutine(GoByTheRoute(routeToGo));
         }
-
-        // Lerping while swipe
-        if (LerpCount > 0)
-        {
-            //Debug.Log(LerpCount);
-            charPos = new Vector3(Mathf.Lerp(currPosX, currPosX + posOffset * sign, (float)LerpCount / LerpRatio), r3D.position.y, r3D.position.z);
-            r3D.position = charPos;
-            LerpCount++;
-            if (LerpCount == LerpRatio)
-            {
-                currPosX = r3D.position.x;
-                LerpCount = 0;
-            }
-        }
-
-        // Forward position update
-        charPos = new Vector3(r3D.position.x, (float)(r3D.position.y + Mathf.Sin(r3D.position.z) * 0.00015), r3D.position.z + speed * Time.deltaTime);
-        r3D.position = charPos;
-        //Debug.Log(r3D.position.z);
-
-
+        
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnCollisionEnter(Collision collision)
     {
-        if (other.CompareTag("Fire Spell"))
-
+        if (collision.gameObject.CompareTag("Ice Spell"))
         {
-            StartCoroutine(FireEffect());
-        }
-        else if (other.CompareTag("Ice Spell"))
-        {
+            Destroy(collision.gameObject);
             StartCoroutine(IceEffect());
         }
     }
 
-    IEnumerator FireEffect()
+    private IEnumerator IceEffect()
     {
-        speed = 5;
-        yield return new WaitForSeconds(3f);
-        speed = 10;
+        iceTrap.SetActive(true);
+        speedModifier = 0;
+        yield return new WaitForSeconds(5);
+        speedModifier = 0.25f;
+        iceTrap.SetActive(false);
     }
 
-    IEnumerator IceEffect()
+    private IEnumerator GoByTheRoute(int routeNum)
     {
-        speed = 0;
-        yield return new WaitForSeconds(3f);
-        speed = 10;
+        coroutineAllowed = false;
+
+        Vector3 p0 = routes[routeNum].GetChild(0).position;
+        Vector3 p1 = routes[routeNum].GetChild(1).position;
+        Vector3 p2 = routes[routeNum].GetChild(2).position;
+        Vector3 p3 = routes[routeNum].GetChild(3).position;
+
+        while (tParam < 1)
+        {
+            // Karakterin o anki Bezier Þekli içindeki konumunu ve bakmasý gereken noktayý hesaplar
+            tParam += Time.deltaTime * speedModifier;
+
+            objectPosition = Mathf.Pow(1 - tParam, 3) * p0 
+                            + 3 * Mathf.Pow(1 - tParam, 2) * tParam * p1 
+                            + 3 * (1 - tParam) * Mathf.Pow(tParam, 2) * p2 
+                            + Mathf.Pow(tParam, 3) * p3;
+            
+            tParamNext = tParam + Time.deltaTime * speedModifier;
+
+            objectPositionNext = Mathf.Pow(1 - tParamNext, 3) * p0
+                            + 3 * Mathf.Pow(1 - tParamNext, 2) * tParamNext * p1
+                            + 3 * (1 - tParamNext) * Mathf.Pow(tParamNext, 2) * p2
+                            + Mathf.Pow(tParamNext, 3) * p3;
+
+            // Oyuncunun karakter konumunu deðiþtirip deðiþtirmediðine bakar.
+            //if (movement.pos != pos && !isSwiping)
+            //{
+            //    posFrom = pos;
+            //    pos = movement.pos;
+            //    isSwiping = true;
+            //}
+
+            // Eðer karakter solda olmasý gerekiyorsa
+            if (pos == -1)
+            {
+                // Eðer karakter sola kaydýrýlýyorsa
+                if (isSwiping)
+                {   
+                    // Karakter kademeli sola kaydýrýlýyor
+                    objectPosition = Vector3.Lerp(objectPosition, objectPosition + (transform.right * -2), (float)LerpCount/LerpRatio);
+                    objectPositionNext = Vector3.Lerp(objectPositionNext, objectPositionNext + (transform.right * -2), (float)LerpCount / LerpRatio);
+                    LerpCount++;
+
+                    // Kaydýrýlma iþlemi tamamlandýysa
+                    if(LerpCount == LerpRatio)
+                    {
+                        LerpCount = 0;
+                        isSwiping = false;
+                        posFrom = pos;
+                    }
+                }
+                // Eðer karakter zaten soldaysa
+                else 
+                {
+                    objectPosition += transform.right * -2;
+                    objectPositionNext += transform.right * -2; 
+                }
+                
+            }
+
+            // Eðer karakter saðda olmasý gerekiyorsa
+            else if (pos == 1)
+            {
+                // Eðer karakter saða kaydýrýlýyorsa
+                if (isSwiping)
+                {
+                    // Karakter kademeli sola kaydýrýlýyor
+                    objectPosition = Vector3.Lerp(objectPosition, objectPosition + (transform.right * 2), (float)LerpCount / LerpRatio);
+                    objectPositionNext = Vector3.Lerp(objectPositionNext, objectPositionNext + (transform.right * 2), (float)LerpCount / LerpRatio);
+                    LerpCount++;
+
+                    // Kaydýrýlma iþlemi tamamlandýysa
+                    if (LerpCount == LerpRatio)
+                    {
+                        LerpCount = 0;
+                        isSwiping = false;
+                        posFrom = pos;
+                    }
+                }
+
+                // Eðer karakter zaten saðdaysa
+                else
+                {
+                    objectPosition += transform.right * 2;
+                    objectPositionNext += transform.right * 2;
+                }
+                
+            }
+
+            // Karakter ortada olmasý gerekiyorsa
+            else if (pos == 0)
+            {
+                // Karakter ortaya kaydýrýlýyorsa
+                if (isSwiping)
+                {
+                    // Saðdan ortaya geçiyorsa
+                    if(posFrom == 1)
+                    {
+                        objectPosition = Vector3.Lerp(objectPosition + (transform.right * 2), objectPosition, (float)LerpCount / LerpRatio);
+                        objectPositionNext = Vector3.Lerp(objectPositionNext + (transform.right * 2), objectPositionNext, (float)LerpCount / LerpRatio);
+                        LerpCount++;
+
+                        // Kaydýrýlma iþlemi tamamlandýysa
+                        if (LerpCount == LerpRatio)
+                        {
+                            LerpCount = 0;
+                            isSwiping = false;
+                            posFrom = pos;
+                        }
+                    }
+
+                    //Soldan ortaya geçiyorsa
+                    else if (posFrom == -1)
+                    {
+                        objectPosition = Vector3.Lerp(objectPosition + (transform.right * -2), objectPosition, (float)LerpCount / LerpRatio);
+                        objectPositionNext = Vector3.Lerp(objectPositionNext + (transform.right * -2), objectPositionNext, (float)LerpCount / LerpRatio);
+                        LerpCount++;
+
+                        // Kaydýrýlma iþlemi tamamlandýysa
+                        if (LerpCount == LerpRatio)
+                        {
+                            LerpCount = 0;
+                            isSwiping = false;
+                            posFrom = pos;
+                        }
+                    }
+                }
+            }
+            
+            // Hesaplanan karakter konumu ve bakýþý iþleniyor
+            transform.position = objectPosition;
+            transform.LookAt(objectPositionNext);
+
+            yield return new WaitForEndOfFrame();
+        }
+
+        tParam = 0f;
+        routeToGo += 1;
+
+        if (routeToGo > routes.Length - 1)
+        {
+            routeToGo = 0;
+        }
+
+        coroutineAllowed = true;
     }
 }
 

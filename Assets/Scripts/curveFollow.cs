@@ -6,10 +6,10 @@ public class curveFollow : MonoBehaviour
 {
     [SerializeField] private Transform[] routes;
     [SerializeField] public static int pos, posFrom;
+    [SerializeField] private float speedModifier;
     public static int routeToGo;
     public static float tParam, tParamNext;
     public static Vector3 objectPosition, objectPositionNext;
-    private float speedModifier;
     private bool coroutineAllowed, isSwiping;
     int LerpRatio = 45,
         LerpCount = 0;      // For Lerp operation
@@ -61,7 +61,7 @@ public class curveFollow : MonoBehaviour
                             + Mathf.Pow(tParamNext, 3) * p3;
 
             // Oyuncunun karakter konumunu deðiþtirip deðiþtirmediðine bakar.
-            if (movement.pos != pos)
+            if (movement.pos != pos && !isSwiping)
             {
                 posFrom = pos;
                 pos = movement.pos;

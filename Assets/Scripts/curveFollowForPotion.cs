@@ -82,7 +82,6 @@ public class curveFollowForPotion : MonoBehaviour
         {
             routeToGo = 0;
         }
-
         coroutineAllowed = true;
     }
 }
