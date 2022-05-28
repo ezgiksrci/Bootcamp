@@ -10,7 +10,7 @@ public class spellSystem : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        collectibles = GameObject.Find("Witch").GetComponent<collectibles>();
+        collectibles = GameObject.Find("Witch(Clone)").GetComponent<collectibles>();
     }
 
     // Update is called once per frame
