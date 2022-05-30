@@ -10,10 +10,13 @@ public class movement : MonoBehaviour
     int sign;                                               // Direction of movement
 
     PhotonView view;
+        
 
-    private void Start()
+    void Start()
     {
         view = GetComponent<PhotonView>();
+        
+
     }
 
     void Update()
