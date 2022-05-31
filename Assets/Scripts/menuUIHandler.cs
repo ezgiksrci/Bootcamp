@@ -9,5 +9,4 @@ public class menuUIHandler : MonoBehaviour
     {
         SceneManager.LoadScene(1);
     }
-
 }

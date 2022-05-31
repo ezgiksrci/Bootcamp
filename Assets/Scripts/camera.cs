@@ -1,19 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
 
 public class camera : MonoBehaviour
 {
-    public Transform player;
-    private Vector3 offset;
+    PhotonView view;
     void Start()
     {
-        offset = transform.position - player.position;
-    }
+        view = GetComponent<PhotonView>();
 
-    // Update is called once per frame
-    void Update()
-    {
-        transform.position = new Vector3(transform.position.x, transform.position.y, offset.z + player.position.z);
+        if (view.IsMine)
+        {
+            gameObject.transform.Find("Camera").gameObject.SetActive(true);
+            gameObject.transform.Find("Canvas").gameObject.SetActive(true);
+        }
     }
 }
