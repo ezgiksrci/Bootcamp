@@ -5,18 +5,15 @@ using Photon.Pun;
 
 public class movement : MonoBehaviour
 {
-
+    
     [SerializeField] public static int pos = 0;             // -1: left, 0: middle(default); 1:right
-    int sign;                                               // Direction of movement
-
+    int sign;             // Direction of movement
+    bool speedCheck = false;
     PhotonView view;
-        
 
-    void Start()
+    private void Start()
     {
         view = GetComponent<PhotonView>();
-        
-
     }
 
     void Update()
@@ -34,6 +31,21 @@ public class movement : MonoBehaviour
                 pos++;
                 sign = 1;
             }
+
+            //if (Input.GetKey(KeyCode.W))
+            //{
+            //    curveFollow.speedModifier = 0.5f;
+            //    speedCheck = true;
+            //}
+            //else 
+            //{
+            //    if (speedCheck)
+            //    {
+            //        curveFollow.speedModifier = 0.25f;
+            //        speedCheck = false;
+            //    }
+            //    
+            //}
         }
     }
 }

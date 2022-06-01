@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
 
 public class curveFollowForPotion : MonoBehaviour
 {
@@ -12,6 +13,8 @@ public class curveFollowForPotion : MonoBehaviour
     private float speedModifier;
     private bool coroutineAllowed;
 
+    PhotonView view;
+
     void Start()
     {
         // Büyünün fýrlatýldýðý konumu çeker
@@ -19,17 +22,18 @@ public class curveFollowForPotion : MonoBehaviour
         objectPosition = curveFollow.objectPosition;
         objectPositionNext = curveFollow.objectPositionNext;
         routeToGo = curveFollow.routeToGo;
-        tParam = curveFollow.tParam;
+        tParam = curveFollow.tParam + 0.075f;
         speedModifier = 0.5f;
         coroutineAllowed = true;
+        view = GetComponent<PhotonView>();
     }
 
     void Update()
     {
-        if (coroutineAllowed)
-        {
-            StartCoroutine(GoByTheRoute(routeToGo));
-        }
+            if (coroutineAllowed)
+            {
+                StartCoroutine(GoByTheRoute(routeToGo));
+            }
     }
 
     private IEnumerator GoByTheRoute(int routeNum)

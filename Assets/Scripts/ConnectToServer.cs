@@ -6,11 +6,14 @@ using UnityEngine.SceneManagement;
 
 public class ConnectToServer : MonoBehaviourPunCallbacks
 {
-    private void Start()
+    // Start is called before the first frame update
+    void Start()
     {
+        // Connecting Photon server
         PhotonNetwork.ConnectUsingSettings();
     }
 
+    // Joining Lobby
     public override void OnConnectedToMaster()
     {
         PhotonNetwork.JoinLobby();

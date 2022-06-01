@@ -7,7 +7,6 @@ using Photon.Pun;
 public class collectibles : MonoBehaviour
 {
     public static bool fireSpell = false, iceSpell = false, shieldSpell = false;
-    [SerializeField] public List<GameObject> imageList;
     PhotonView view;
 
     private void Start()
@@ -17,29 +16,25 @@ public class collectibles : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (view.IsMine)
-        {
-            if (!fireSpell && !iceSpell && !shieldSpell)
+        if (!fireSpell && !iceSpell && !shieldSpell && view.IsMine) {
+            
+            if (other.gameObject.CompareTag("Fire Potion"))
             {
-
-                if (other.gameObject.CompareTag("Fire Potion"))
-                {
-                    Destroy(other.gameObject);
-                    fireSpell = true;
-                    imageList[0].SetActive(true);
-                }
-                else if (other.gameObject.CompareTag("Ice Potion"))
-                {
-                    Destroy(other.gameObject);
-                    iceSpell = true;
-                    imageList[1].SetActive(true);
-                }
-                else if (other.gameObject.CompareTag("Shield Potion"))
-                {
-                    Destroy(other.gameObject);
-                    shieldSpell = true;
-                    imageList[2].SetActive(true);
-                }
+                Destroy(other.gameObject);
+                fireSpell = true;
+                gameObject.transform.Find("Canvas").gameObject.transform.GetChild(0).gameObject.SetActive(true);
+            }
+            else if (other.gameObject.CompareTag("Ice Potion"))
+            {
+                Destroy(other.gameObject);
+                iceSpell = true;
+                gameObject.transform.Find("Canvas").gameObject.transform.GetChild(1).gameObject.SetActive(true);
+            }
+            else if (other.gameObject.CompareTag("Shield Potion"))
+            {
+                Destroy(other.gameObject);
+                shieldSpell = true;
+                gameObject.transform.Find("Canvas").gameObject.transform.GetChild(2).gameObject.SetActive(true);
             }
         }
     }
