@@ -970,7 +970,6 @@ GameObject:
   - component: {fileID: 7292996528348082745}
   - component: {fileID: 1505226963463904902}
   - component: {fileID: -6187547473013327076}
-  - component: {fileID: 2350904800194342258}
   m_Layer: 0
   m_Name: Witch
   m_TagString: Player
@@ -1159,18 +1158,6 @@ MonoBehaviour:
     InterpolateOption: 0
     InterpolateMoveTowardsSpeed: 1
     InterpolateLerpSpeed: 0
---- !u!114 &2350904800194342258
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3567484841514033799}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f42244d45034aaa47971cef6450842ba, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &3601423378419749001
 GameObject:
   m_ObjectHideFlags: 0
@@ -2643,7 +2630,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &7292996528504767932
 Transform:
   m_ObjectHideFlags: 0
