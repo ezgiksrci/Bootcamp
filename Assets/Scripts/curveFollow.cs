@@ -20,7 +20,7 @@ public class curveFollow : MonoBehaviour
 
     void Start()
     {
-        pos = 0;
+        pos = SpawnPlayers.pos;
         posFrom = pos;
         routeToGo = 0;
         tParam = 0f;
@@ -77,6 +77,7 @@ public class curveFollow : MonoBehaviour
     {
         if (view.IsMine)
         {
+            Debug.Log(speedModifier);
             coroutineAllowed = false;
 
             Vector3 p0 = routes[routeNum].GetChild(0).position;

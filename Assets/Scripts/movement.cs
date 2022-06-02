@@ -6,7 +6,7 @@ using Photon.Pun;
 public class movement : MonoBehaviour
 {
     
-    [SerializeField] public static int pos = 0;             // -1: left, 0: middle(default); 1:right
+    [SerializeField] public static int pos;             // -1: left, 0: middle(default); 1:right
     int sign;             // Direction of movement
     bool speedCheck = false;
     PhotonView view;
@@ -14,6 +14,7 @@ public class movement : MonoBehaviour
     private void Start()
     {
         view = GetComponent<PhotonView>();
+        pos = SpawnPlayers.pos;
     }
 
     void Update()
