@@ -578,7 +578,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh58024
+  m_Name: pb_Mesh-3246
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -742,7 +742,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh58146
+  m_Name: pb_Mesh-3422
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -1005,7 +1005,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh58256
+  m_Name: pb_Mesh-3354
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -1252,6 +1252,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1616113468}
   - component: {fileID: 1616113467}
+  - component: {fileID: 1616113469}
   m_Layer: 0
   m_Name: SpawnPlayers
   m_TagString: Untagged
@@ -1288,6 +1289,28 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1616113469
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1616113466}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 6
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
 --- !u!1 &1956130330
 GameObject:
   m_ObjectHideFlags: 0
@@ -1392,7 +1415,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh57954
+  m_Name: pb_Mesh-3096
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -2229,6 +2252,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3428720449089211477}
     m_Modifications:
+    - target: {fileID: 830445657108305259, guid: 4d2818e891675b44cb1bee496f82518a,
+        type: 3}
+      propertyPath: sceneViewId
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 1404248317261779282, guid: 4d2818e891675b44cb1bee496f82518a,
         type: 3}
       propertyPath: m_Mesh
