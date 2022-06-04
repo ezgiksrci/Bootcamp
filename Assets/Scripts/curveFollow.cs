@@ -103,7 +103,7 @@ public class curveFollow : MonoBehaviour
                                 + Mathf.Pow(tParamNext, 3) * p3;
 
                 // Oyuncunun karakter konumunu deðiþtirip deðiþtirmediðine bakar.
-                if (movement.pos != pos && !isSwiping)
+                if (movement.pos != pos && !isSwiping && speedModifier > 0f)
                 {
                     posFrom = pos;
                     pos = movement.pos;

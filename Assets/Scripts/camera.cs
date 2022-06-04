@@ -7,7 +7,7 @@ using Photon.Realtime;
 public class camera : MonoBehaviourPunCallbacks
 {
     PhotonView view;
-    int numberPlayers = 1;
+    
     void Start()
     {
         view = GetComponent<PhotonView>();
@@ -24,15 +24,15 @@ public class camera : MonoBehaviourPunCallbacks
     {
         if (PhotonNetwork.PlayerList.Length == 2)
         {
-            new WaitForSeconds(3);
-            PhotonView photonView = PhotonView.Get(this);
-            photonView.RPC("curveFollowEnabled", RpcTarget.All);
+            StartCoroutine(WaitToStartGame());
         }
     }
 
-    public override void OnPlayerEnteredRoom(Player newPlayer)
+    IEnumerator WaitToStartGame()
     {
-        numberPlayers++;
+        yield return new WaitForSeconds(3);
+        PhotonView photonView = PhotonView.Get(this);
+        photonView.RPC("curveFollowEnabled", RpcTarget.All);
     }
 
     [PunRPC]

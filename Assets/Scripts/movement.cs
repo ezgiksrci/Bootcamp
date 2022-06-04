@@ -33,20 +33,20 @@ public class movement : MonoBehaviour
                 sign = 1;
             }
 
-            //if (Input.GetKey(KeyCode.W))
-            //{
-            //    curveFollow.speedModifier = 0.5f;
-            //    speedCheck = true;
-            //}
-            //else 
-            //{
-            //    if (speedCheck)
-            //    {
-            //        curveFollow.speedModifier = 0.25f;
-            //        speedCheck = false;
-            //    }
-            //    
-            //}
+            if (Input.GetKey(KeyCode.W))
+            {
+                curveFollow.speedModifier = 0.5f;
+                speedCheck = true;
+            }
+            else 
+            {
+                if (speedCheck)
+                {
+                    curveFollow.speedModifier = 0.25f;
+                    speedCheck = false;
+                }
+                
+            }
         }
     }
 }

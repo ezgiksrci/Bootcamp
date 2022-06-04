@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
 
 public class potion : MonoBehaviour
 {
@@ -9,7 +10,13 @@ public class potion : MonoBehaviour
         Debug.Log("Cellat geldi!!!");
         if (other.gameObject.CompareTag("Player"))
         {
-            Destroy(gameObject);
+            if (gameObject.GetComponent<PhotonView>().IsMine)
+            {
+                //PhotonNetwork.Destroy(gameObject);
+                PhotonView photonView = PhotonView.Get(this);
+                photonView.RPC("Destroy", RpcTarget.All, gameObject);
+            }
+            
         }
     }
 
@@ -18,7 +25,19 @@ public class potion : MonoBehaviour
         Debug.Log("Cellat geldi2");
         if (collision.gameObject.CompareTag("Player"))
         {
-            Destroy(gameObject);
+            if (gameObject.GetComponent<PhotonView>().IsMine)
+            {
+                //PhotonNetwork.Destroy(gameObject);
+                PhotonView photonView = PhotonView.Get(this);
+                photonView.RPC("Destroy", RpcTarget.All, gameObject);
+            }
         }
+    }
+
+    [PunRPC]
+
+    private void Destroy(GameObject gameObject)
+    {
+        PhotonNetwork.Destroy(gameObject);
     }
 }
