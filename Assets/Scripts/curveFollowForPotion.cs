@@ -61,7 +61,7 @@ public class curveFollowForPotion : MonoBehaviour
                             + 3 * (1 - tParamNext) * Mathf.Pow(tParamNext, 2) * p2
                             + Mathf.Pow(tParamNext, 3) * p3;
 
-            Debug.Log(pos);
+            //Debug.Log(pos);
             if (pos == -1)
             {
                 objectPosition += transform.right * -2;
@@ -75,7 +75,6 @@ public class curveFollowForPotion : MonoBehaviour
 
             transform.position = objectPosition;
             transform.LookAt(objectPositionNext);
-
             yield return new WaitForEndOfFrame();
         }
 

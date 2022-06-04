@@ -16,7 +16,6 @@ public class curveFollow : MonoBehaviour
         LerpCount = 0;      // For Lerp operation
 
     PhotonView view;
-    GameObject Object;
 
     void Start()
     {
@@ -39,45 +38,11 @@ public class curveFollow : MonoBehaviour
         }   
     }
 
-    private void OnCollisionEnter(Collision collision)
-    {
-        if(collision.gameObject.CompareTag("Ice Spell"))
-        {
-            Object = collision.gameObject;
-            if (Object.GetComponent<PhotonView>().IsMine)
-            {   
-                PhotonNetwork.Destroy(Object);
-                PhotonView photonView = PhotonView.Get(this);
-                photonView.RPC("SpeedMod", RpcTarget.Others, 0f);
-                photonView.RPC("IceTrapActivation", RpcTarget.All);
-                StartCoroutine(IceEffect());
-            }
-        }
-    }
-
-    private IEnumerator IceEffect()
-    {
-        yield return new WaitForSeconds(5);
-        IceTrapDeActivation1();
-    }
-
-    private void IceTrapDeActivation1()
-    {
-        Debug.Log("IceTrapDeActivation1");
-        if (!view.IsMine)
-        {
-            Debug.Log("Buz Kapatma");
-            PhotonView photonView = PhotonView.Get(this);
-            photonView.RPC("IceTrapDeActivation", RpcTarget.All);
-            photonView.RPC("SpeedMod", RpcTarget.Others, 0.25f);
-        }
-    }
-
     private IEnumerator GoByTheRoute(int routeNum)
     {
         if (view.IsMine)
         {
-            Debug.Log(speedModifier);
+            //Debug.Log(speedModifier);
             coroutineAllowed = false;
 
             Vector3 p0 = routes[routeNum].GetChild(0).position;
@@ -224,23 +189,5 @@ public class curveFollow : MonoBehaviour
 
             coroutineAllowed = true;
         }
-    }
-
-    [PunRPC]
-    void SpeedMod(float a)
-    {
-        speedModifier = a;
-    }
-
-    [PunRPC]
-    void IceTrapActivation()
-    {
-        gameObject.transform.Find("Ice Trap 1").gameObject.SetActive(true);
-    }
-    
-    [PunRPC]
-    void IceTrapDeActivation()
-    {
-        gameObject.transform.Find("Ice Trap 1").gameObject.SetActive(false);
     }
 }

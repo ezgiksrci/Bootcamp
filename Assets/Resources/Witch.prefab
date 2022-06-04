@@ -971,6 +971,7 @@ GameObject:
   - component: {fileID: 1505226963463904902}
   - component: {fileID: -6187547473013327076}
   - component: {fileID: 2350904800194342258}
+  - component: {fileID: -2886564726920627036}
   m_Layer: 0
   m_Name: Witch
   m_TagString: Player
@@ -1169,6 +1170,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f42244d45034aaa47971cef6450842ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-2886564726920627036
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3567484841514033799}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3342263b64315094497cda1fcc573f39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &3601423378419749001
@@ -3263,7 +3276,7 @@ PrefabInstance:
     - target: {fileID: 1404248317261779282, guid: 4d2818e891675b44cb1bee496f82518a,
         type: 3}
       propertyPath: m_VersionIndex
-      value: 5547
+      value: 5559
       objectReference: {fileID: 0}
     - target: {fileID: 1404248317261779294, guid: 4d2818e891675b44cb1bee496f82518a,
         type: 3}
@@ -3334,11 +3347,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Ice Trap 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1404248318100525871, guid: 4d2818e891675b44cb1bee496f82518a,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d2818e891675b44cb1bee496f82518a, type: 3}
