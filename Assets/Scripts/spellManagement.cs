@@ -18,21 +18,21 @@ public class spellManagement : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
+        print("Bir þey çarptý!!!");
         if (collision.gameObject.CompareTag("Ice Spell"))
         {
+            print("Çarpan þey buzmuþ!!!");
             PhotonView photonView = PhotonView.Get(this);
-            
-            print("Buz çarptý!!");
-            
+
             if (collision.gameObject.GetComponent<PhotonView>().IsMine)
             {
                 print("1den geldi");
                 PhotonNetwork.Destroy(collision.gameObject);
-            }    
+            }
             else
             {
                 print("2den geldi");
-                photonView.RPC("Destroy", RpcTarget.MasterClient, collision.gameObject.GetComponent<PhotonView>().ViewID); 
+                photonView.RPC("Destroy", RpcTarget.MasterClient, collision.gameObject.GetComponent<PhotonView>().ViewID);
             }
             photonView.RPC("SpeedMod", RpcTarget.Others, 0f);
             photonView.RPC("IceTrapActivation", RpcTarget.All);
