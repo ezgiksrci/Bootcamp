@@ -114,3 +114,35 @@ Story'ler yapılacak işlere (task'lere) bölünmüştür. Miro Board'da gözük
   
 **Diğer Notlar:**
 - N/A
+
+---
+
+# Sprint 3
+- **Sprint Notları**: Harita oluşturuldu. Oyun içi menüler oluşturuldu. Farklı tipteki seslerin ayarlarının yapılabilmesi için 3 mikser eklendi ve ses menüsüne entegre edildi. Photon Network eklendi. Photon Network’ün oyuna entegre edilmesinde yaşanan sorunlar için çözüm üretildi. Mobil için touch swipe control eklendi.
+
+**Sprint içinde tamamlanması tahmin edilen puan:** 135
+
+**Puan tamamlama mantığı:** Toplamda proje boyunca tamamlanması gereken 275 puanlık backlog bulunmaktadır. 3 sprint'e bölündüğünde son sprint'in 135 puan olmasına karar verildi.
+
+**Backlog düzeni ve Story seçimleri:** Backlog'umuz ilk yapılacak story'lere göre düzenlenmiştir. Sprint başına tahmin edilen puan sayısını geçmeyecek şekilde sıradan seçimler yapılmaktadır. Story başına çıkan tahmin puanı, toplam puanın yarısından az tutulmuştur.
+
+Story'ler yapılacak işlere (task'lere) bölünmüştür. Miro Board'da gözüken kırmızı item'lar yapılacak işleri (task) gösterirken, mavi item'lar story'leri temsil etmektedir.
+ 
+- **Backlog düzeni:** Backlog'umuz ilk yapılacak backloglara göre düzenlenmiştir.
+ 
+- **Daily Scrum:** <https://github.com/ezgiksrci/Bootcamp/blob/main/ProjectManagement/Sprint2Documents/DailyScrum_WhatsApp_3.txt> 
+ 
+- **Sprint board update:** Sprint board screenshotları: ![Backlog 2](https://github.com/ezgiksrci/Bootcamp/blob/main/ProjectManagement/Sprint2Documents/backlog3.png)
+
+
+- **Ürün Durumu:** Ekran görüntüleri:
+![Product Screenshot 1]()
+
+- **Sprint Review:** Alınan kararlar: Oyundaki rakibin online olmasına karar verildi. Bu sebeple Photon Network eklenmesi kararlaştırıldı. 
+   *Sprint Review katılımcıları:* Ezgi Keserci, Taha Enes Kür, Berkay Toylan, Muhammet Doğan
+
+- **Sprint Retrospective:**
+  - Görevler yapılırken daha hızlı ve daha senkronize çalışılması gerektiğine karar verildi. 
+  
+**Diğer Notlar:**
+- N/A
