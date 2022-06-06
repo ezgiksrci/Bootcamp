@@ -5,10 +5,17 @@ using Photon.Pun;
 
 public class movement : MonoBehaviour
 {
-    
+
     [SerializeField] public static int pos;             // -1: left, 0: middle(default); 1:right
+    int sign;             // Direction of movement
     bool speedCheck = false;
+
+    private Vector2 startTouchPosition;
+    private Vector2 endTouchPosition;
+
     PhotonView view;
+
+
 
     private void Start()
     {
@@ -20,30 +27,55 @@ public class movement : MonoBehaviour
     {
         if (view.IsMine)
         {
-            // Determines which line the player swipe
-            if (Input.GetKeyDown(KeyCode.A) && pos > -1)
+            // Swipe controls for mobile.
+
+            if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
             {
-                pos--;
-            }
-            else if (Input.GetKeyDown(KeyCode.D) && pos < 1)
-            {
-                pos++;
+                startTouchPosition = Input.GetTouch(0).position;
             }
 
-            if (Input.GetKey(KeyCode.W))
+            if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Ended)
             {
-                curveFollow.speedModifier = 0.5f;
-                speedCheck = true;
-            }
-            else 
-            {
-                if (speedCheck)
+                endTouchPosition = Input.GetTouch(0).position;
+                if (endTouchPosition.x < startTouchPosition.x && pos > -1)
                 {
-                    curveFollow.speedModifier = 0.25f;
-                    speedCheck = false;
+                    pos--;
+                    sign = -1;
                 }
-                
+                else if (endTouchPosition.x > startTouchPosition.x && pos < 1)
+                {
+                    pos++;
+                    sign = 1;
+                }
             }
+
+
+            //// Determines which line the player swipe
+            //if (Input.GetKeyDown(KeyCode.A) && pos > -1)
+            //{
+            //    pos--;
+            //    sign = -1;
+            //}
+            //else if (Input.GetKeyDown(KeyCode.D) && pos < 1)
+            //{
+            //    pos++;
+            //    sign = 1;
+            //}
+
+            //if (Input.GetKey(KeyCode.W))
+            //{
+            //    curveFollow.speedModifier = 0.5f;
+            //    speedCheck = true;
+            //}
+            //else 
+            //{
+            //    if (speedCheck)
+            //    {
+            //        curveFollow.speedModifier = 0.25f;
+            //        speedCheck = false;
+            //    }
+            //    
+            //}
         }
     }
 }

@@ -21,7 +21,7 @@ public class camera : MonoBehaviourPunCallbacks
 
     private void Update()
     {
-        if (PhotonNetwork.PlayerList.Length == 2)
+        if (PhotonNetwork.PlayerList.Length == 2 && PhotonNetwork.IsMasterClient)
         {
             StartCoroutine(WaitToStartGame());
         }
@@ -29,9 +29,11 @@ public class camera : MonoBehaviourPunCallbacks
 
     IEnumerator WaitToStartGame()
     {
-        yield return new WaitForSeconds(5);
-        PhotonView photonView = PhotonView.Get(this);
-        photonView.RPC("curveFollowEnabled", RpcTarget.All);
+        
+         yield return new WaitForSeconds(5);
+         PhotonView photonView = PhotonView.Get(this);
+         photonView.RPC("curveFollowEnabled", RpcTarget.AllBufferedViaServer);
+        
     }
 
     [PunRPC]

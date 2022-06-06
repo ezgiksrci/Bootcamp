@@ -12,8 +12,8 @@ public class curveFollow : MonoBehaviour
     public static float tParam, tParamNext;
     public static Vector3 objectPosition, objectPositionNext;
     public static bool coroutineAllowed, isSwiping;
-    int LerpRatio = 45,
-        LerpCount = 0;      // For Lerp operation
+    int LerpRatio = 45;
+    float LerpCount = 0f;      // For Lerp operation
 
     private List<Transform> routes;
     PhotonView view;
@@ -92,12 +92,12 @@ public class curveFollow : MonoBehaviour
                         // Karakter kademeli sola kayd�r�l�yor
                         objectPosition = Vector3.Lerp(objectPosition, objectPosition + (transform.right * -4), ((float)LerpCount / LerpRatio));
                         objectPositionNext = Vector3.Lerp(objectPositionNext, objectPositionNext + (transform.right * -4), ((float)LerpCount / LerpRatio));
-                        LerpCount++;
+                        LerpCount += Time.deltaTime * 100;
 
                         // Kayd�r�lma i�lemi tamamland�ysa
-                        if (LerpCount == LerpRatio)
+                        if (LerpCount >= LerpRatio)
                         {
-                            LerpCount = 0;
+                            LerpCount = 0f;
                             isSwiping = false;
                             posFrom = pos;
                         }
@@ -119,12 +119,12 @@ public class curveFollow : MonoBehaviour
                         // Karakter kademeli sola kayd�r�l�yor
                         objectPosition = Vector3.Lerp(objectPosition, objectPosition + (transform.right * 4), (float)LerpCount / LerpRatio);
                         objectPositionNext = Vector3.Lerp(objectPositionNext, objectPositionNext + (transform.right * 4), (float)LerpCount / LerpRatio);
-                        LerpCount++;
+                        LerpCount += Time.deltaTime * 100;
 
                         // Kayd�r�lma i�lemi tamamland�ysa
-                        if (LerpCount == LerpRatio)
+                        if (LerpCount >= LerpRatio)
                         {
-                            LerpCount = 0;
+                            LerpCount = 0f;
                             isSwiping = false;
                             posFrom = pos;
                         }
@@ -149,12 +149,12 @@ public class curveFollow : MonoBehaviour
                         {
                             objectPosition = Vector3.Lerp(objectPosition + (transform.right * 4), objectPosition, (float)LerpCount / LerpRatio);
                             objectPositionNext = Vector3.Lerp(objectPositionNext + (transform.right * 4), objectPositionNext, (float)LerpCount / LerpRatio);
-                            LerpCount++;
+                            LerpCount += Time.deltaTime * 100;
 
                             // Kayd�r�lma i�lemi tamamland�ysa
-                            if (LerpCount == LerpRatio)
+                            if (LerpCount >= LerpRatio)
                             {
-                                LerpCount = 0;
+                                LerpCount = 0f;
                                 isSwiping = false;
                                 posFrom = pos;
                             }
@@ -165,12 +165,12 @@ public class curveFollow : MonoBehaviour
                         {
                             objectPosition = Vector3.Lerp(objectPosition + (transform.right * -4), objectPosition, (float)LerpCount / LerpRatio);
                             objectPositionNext = Vector3.Lerp(objectPositionNext + (transform.right * -4), objectPositionNext, (float)LerpCount / LerpRatio);
-                            LerpCount++;
+                            LerpCount += Time.deltaTime * 100;
 
                             // Kayd�r�lma i�lemi tamamland�ysa
-                            if (LerpCount == LerpRatio)
+                            if (LerpCount >= LerpRatio)
                             {
-                                LerpCount = 0;
+                                LerpCount = 0f;
                                 isSwiping = false;
                                 posFrom = pos;
                             }

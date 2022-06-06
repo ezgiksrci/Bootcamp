@@ -22,21 +22,21 @@ public class spellSystem : MonoBehaviour
     {
         if(curveFollow.speedModifier != 0)
         {
-            if (Input.GetKeyDown(KeyCode.Space) && collectibles.fireSpell && view.IsMine)
+            if ((Input.GetTouch(0).tapCount == 2 || Input.GetKeyDown(KeyCode.Space)) && collectibles.fireSpell && view.IsMine)
             {
                 Debug.Log("Ateþ aktif");
                 PhotonNetwork.Instantiate(speellList[0].name, transform.position + transform.forward * 2, Quaternion.identity);
                 collectibles.fireSpell = false;
                 gameObject.transform.Find("Canvas").gameObject.transform.GetChild(0).gameObject.SetActive(false);
             }
-            else if (Input.GetKeyDown(KeyCode.Space) && collectibles.iceSpell && view.IsMine)
+            else if ((Input.GetTouch(0).tapCount == 2 || Input.GetKeyDown(KeyCode.Space)) && collectibles.iceSpell && view.IsMine)
             {
                 Debug.Log("Buz aktif");
                 PhotonNetwork.Instantiate(speellList[1].name, transform.position + transform.forward * 2, Quaternion.identity);
                 collectibles.iceSpell = false;
                 gameObject.transform.Find("Canvas").gameObject.transform.GetChild(1).gameObject.SetActive(false);
             }
-            else if (Input.GetKeyDown(KeyCode.Space) && collectibles.shieldSpell && view.IsMine)
+            else if ((Input.GetTouch(0).tapCount == 2 || Input.GetKeyDown(KeyCode.Space)) && collectibles.shieldSpell && view.IsMine)
             {
                 Debug.Log("Kalkan aktif");
                 PhotonView photonView = PhotonView.Get(this);

@@ -73,7 +73,7 @@ public class spellManagement : MonoBehaviour
         iceSize = gameObject.transform.Find("Ice Trap 1").gameObject.transform.localScale.y;
         while (iceSize > 0f)
         {
-            if (Input.GetKeyDown(KeyCode.S))
+            if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
             {
                 PhotonView photonView = PhotonView.Get(this);
                 photonView.RPC("CrackIce", RpcTarget.All, iceSize);
