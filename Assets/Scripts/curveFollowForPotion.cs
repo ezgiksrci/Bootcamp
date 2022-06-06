@@ -5,7 +5,7 @@ using Photon.Pun;
 
 public class curveFollowForPotion : MonoBehaviour
 {
-    [SerializeField] private Transform[] routes;
+    [SerializeField] GameObject path;
     [SerializeField] private int pos;
     private int routeToGo;
     private float tParam, tParamNext;
@@ -13,10 +13,20 @@ public class curveFollowForPotion : MonoBehaviour
     private float speedModifier;
     private bool coroutineAllowed;
 
+    private List<Transform> routes;
+
     PhotonView view;
 
     void Start()
     {
+        path = GameObject.Find("PlayerRoutes");
+        routes = new List<Transform>();
+
+        for (int i = 0; i < path.transform.childCount; i++)
+        {
+            routes.Add(path.transform.GetChild(i));
+        }
+
         // Büyünün fýrlatýldýðý konumu çeker
         pos = curveFollow.pos;
         objectPosition = curveFollow.objectPosition;
@@ -26,6 +36,8 @@ public class curveFollowForPotion : MonoBehaviour
         speedModifier = 0.5f;
         coroutineAllowed = true;
         view = GetComponent<PhotonView>();
+
+        StartCoroutine(DestroyAfterTenSecs());
     }
 
     void Update()
@@ -64,13 +76,13 @@ public class curveFollowForPotion : MonoBehaviour
             //Debug.Log(pos);
             if (pos == -1)
             {
-                objectPosition += transform.right * -2;
-                objectPositionNext += transform.right * -2;
+                objectPosition += transform.right * -4;
+                objectPositionNext += transform.right * -4;
             }
             else if (pos == 1)
             {
-                objectPosition += transform.right * 2;
-                objectPositionNext += transform.right * 2;
+                objectPosition += transform.right * 4;
+                objectPositionNext += transform.right * 4;
             }
 
             transform.position = objectPosition;
@@ -81,10 +93,16 @@ public class curveFollowForPotion : MonoBehaviour
         tParam = 0f;
         routeToGo += 1;
 
-        if (routeToGo > routes.Length - 1)
+        if (routeToGo > routes.Count - 1)
         {
             routeToGo = 0;
         }
         coroutineAllowed = true;
+    }
+
+    IEnumerator DestroyAfterTenSecs()
+    {
+        yield return new WaitForSeconds(10);
+        PhotonNetwork.Destroy(gameObject);
     }
 }

@@ -1057,12 +1057,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e42bacd5ae473de47a4fbcc0c02cad4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  routes:
-  - {fileID: 4009015854564569198, guid: f8c9aa17e93cdb14b92c31b81e933027, type: 3}
-  - {fileID: 4273988619486581197, guid: 451c0ab2c95013142919b1bfba62337c, type: 3}
-  - {fileID: 80780954107165601, guid: 96a1e70f6c9aadc4882019a25139f4b5, type: 3}
-  - {fileID: 2235565002762160351, guid: fc3e25ff48f68784c85e9b569ba8d72c, type: 3}
-  - {fileID: 853508841744524604, guid: 02ecce92e1a560b4ba25d36bd66554b2, type: 3}
 --- !u!114 &7292996528348082738
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3427,6 +3421,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Shield
+      objectReference: {fileID: 0}
+    - target: {fileID: 4811387660397694682, guid: 21e0dfdfc76671f4d9efa44308631a29,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6207887074075023994, guid: 21e0dfdfc76671f4d9efa44308631a29,
         type: 3}

@@ -12,7 +12,6 @@ public class camera : MonoBehaviourPunCallbacks
     {
         view = GetComponent<PhotonView>();
 
-
         if (view.IsMine)
         {
             gameObject.transform.Find("Camera").gameObject.SetActive(true);
@@ -30,7 +29,7 @@ public class camera : MonoBehaviourPunCallbacks
 
     IEnumerator WaitToStartGame()
     {
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(5);
         PhotonView photonView = PhotonView.Get(this);
         photonView.RPC("curveFollowEnabled", RpcTarget.All);
     }
@@ -38,7 +37,11 @@ public class camera : MonoBehaviourPunCallbacks
     [PunRPC]
     void curveFollowEnabled()
     {
-        gameObject.GetComponent<curveFollow>().enabled = true;
-        gameObject.GetComponent<camera>().enabled = false;
+        if (view.IsMine)
+        {
+            gameObject.GetComponent<curveFollow>().enabled = true;
+            print("Script aktif edildi " + view.ViewID);
+            gameObject.GetComponent<camera>().enabled = false;
+        }
     }
 }

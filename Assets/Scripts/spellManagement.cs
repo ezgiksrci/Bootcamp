@@ -32,21 +32,44 @@ public class spellManagement : MonoBehaviour
             else
             {
                 print("2den geldi");
-                photonView.RPC("Destroy", RpcTarget.MasterClient, collision.gameObject.GetComponent<PhotonView>().ViewID);
+                //photonView.RPC("Destroy", RpcTarget.MasterClient, collision.gameObject.GetComponent<PhotonView>().ViewID);
             }
             photonView.RPC("SpeedMod", RpcTarget.Others, 0f);
             photonView.RPC("IceTrapActivation", RpcTarget.All);
             photonView.RPC("Coroutine", RpcTarget.All);
         }
+
+        else if (collision.gameObject.CompareTag("Fire Spell"))
+        {
+            print("Çarpan þey ateþmiþ!!!");
+            PhotonView photonView = PhotonView.Get(this);
+
+            if (collision.gameObject.GetComponent<PhotonView>().IsMine)
+            {
+                print("1den geldi");
+                PhotonNetwork.Destroy(collision.gameObject);
+            }
+            else
+            {
+                print("2den geldi");
+                //photonView.RPC("Destroy", RpcTarget.Others, collision.gameObject.GetComponent<PhotonView>().ViewID);
+            }
+            photonView.RPC("TParam", RpcTarget.Others, 0f);
+            
+        }
+
+        else if (collision.gameObject.CompareTag("Building") && view.IsMine)
+        {
+            print("Binaya girdim!!!");
+            PhotonView photonView = PhotonView.Get(this);
+            curveFollow.routeToGo -= 1;
+        }
     }
 
     private IEnumerator IceEffect()
     {
-        print("Coroutine Çalýþtý");
-        print("Bekleme Baþladý");
         yield return new WaitForSeconds(1);
-        print("Bekleme Bitti");
-
+        
         iceSize = gameObject.transform.Find("Ice Trap 1").gameObject.transform.localScale.y;
         while (iceSize > 0f)
         {
@@ -101,11 +124,11 @@ public class spellManagement : MonoBehaviour
         gameObject.transform.Find("Ice Trap 1").gameObject.SetActive(false);
     }
 
-    [PunRPC]
-    private void Destroy(int ID)
-    {
-        PhotonNetwork.Destroy(PhotonView.Find(ID).gameObject);
-    }
+    //[PunRPC]
+    //private void Destroy(int ID)
+    //{
+    //    PhotonNetwork.Destroy(PhotonView.Find(ID).gameObject);
+    //}
 
     [PunRPC]
     private void Coroutine()
@@ -113,6 +136,15 @@ public class spellManagement : MonoBehaviour
         if(view.IsMine)
         {
             StartCoroutine(IceEffect());
+        }
+    }
+
+    [PunRPC]
+    private void TParam(float num)
+    {
+        if (view.IsMine)
+        {
+            curveFollow.tParam = num;
         }
     }
 

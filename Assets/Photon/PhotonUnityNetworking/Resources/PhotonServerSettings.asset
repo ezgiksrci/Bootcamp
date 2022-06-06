@@ -52,6 +52,8 @@ MonoBehaviour:
   - IceCrack
   - Coroutine
   - CrackIce
+  - TParam
+  - CoroutineCall
   DisableAutoOpenWizard: 1
   ShowSettings: 0
   DevRegionSetOnce: 1

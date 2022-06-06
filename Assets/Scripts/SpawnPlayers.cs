@@ -12,12 +12,12 @@ public class SpawnPlayers : MonoBehaviour
     {
         if (PhotonNetwork.PlayerList.Length == 1)
         {
-            PhotonNetwork.Instantiate(PlayerPrefab.name, transform.position + transform.right * -2, Quaternion.identity);
+            PhotonNetwork.Instantiate(PlayerPrefab.name, transform.position + transform.right * -4, transform.rotation);
             pos = -1;
         }
         else if (PhotonNetwork.PlayerList.Length == 2)
         {
-            PhotonNetwork.Instantiate(PlayerPrefab.name, transform.position + transform.right * 2, Quaternion.identity);
+            PhotonNetwork.Instantiate(PlayerPrefab.name, transform.position + transform.right * 4, transform.rotation);
             pos = 1;
         }
     }
