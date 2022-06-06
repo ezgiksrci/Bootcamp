@@ -136,7 +136,9 @@ Story'ler yapılacak işlere (task'lere) bölünmüştür. Miro Board'da gözük
 
 
 - **Ürün Durumu:** Ekran görüntüleri:
-![Product Screenshot 1]()
+![Product Screenshot 1](https://github.com/ezgiksrci/Bootcamp/blob/main/ProjectManagement/Sprint3Documents/Product_SS1.png)
+![Product Screenshot 2](https://github.com/ezgiksrci/Bootcamp/blob/main/ProjectManagement/Sprint3Documents/Product_SS2.png)
+![Product Screenshot 3](https://github.com/ezgiksrci/Bootcamp/blob/main/ProjectManagement/Sprint3Documents/Product_SS3.png)
 
 - **Sprint Review:** Alınan kararlar: Oyundaki rakibin online olmasına karar verildi. Bu sebeple Photon Network eklenmesi kararlaştırıldı. 
    *Sprint Review katılımcıları:* Ezgi Keserci, Taha Enes Kür, Berkay Toylan, Muhammet Doğan
