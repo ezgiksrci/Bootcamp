@@ -595,7 +595,8 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4972435735792611812, guid: eb3723b3f81094b4ba4361ab520246a6, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: eb3723b3f81094b4ba4361ab520246a6, type: 3}
 --- !u!1 &4510009037547313351 stripped
 GameObject:
