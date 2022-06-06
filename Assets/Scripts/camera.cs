@@ -7,11 +7,10 @@ using Photon.Realtime;
 public class camera : MonoBehaviourPunCallbacks
 {
     PhotonView view;
-    int numberPlayers = 1;
+    
     void Start()
     {
         view = GetComponent<PhotonView>();
-
 
         if (view.IsMine)
         {
@@ -24,21 +23,25 @@ public class camera : MonoBehaviourPunCallbacks
     {
         if (PhotonNetwork.PlayerList.Length == 2)
         {
-            new WaitForSeconds(3);
-            PhotonView photonView = PhotonView.Get(this);
-            photonView.RPC("curveFollowEnabled", RpcTarget.All);
+            StartCoroutine(WaitToStartGame());
         }
     }
 
-    public override void OnPlayerEnteredRoom(Player newPlayer)
+    IEnumerator WaitToStartGame()
     {
-        numberPlayers++;
+        yield return new WaitForSeconds(5);
+        PhotonView photonView = PhotonView.Get(this);
+        photonView.RPC("curveFollowEnabled", RpcTarget.All);
     }
 
     [PunRPC]
     void curveFollowEnabled()
     {
-        gameObject.GetComponent<curveFollow>().enabled = true;
-        gameObject.GetComponent<camera>().enabled = false;
+        if (view.IsMine)
+        {
+            gameObject.GetComponent<curveFollow>().enabled = true;
+            print("Script aktif edildi " + view.ViewID);
+            gameObject.GetComponent<camera>().enabled = false;
+        }
     }
 }

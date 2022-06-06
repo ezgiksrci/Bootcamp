@@ -5,21 +5,29 @@ using Photon.Pun;
 
 public class curveFollow : MonoBehaviour
 {
-    [SerializeField] private Transform[] routes;
+    private GameObject path;
     [SerializeField] public static int pos, posFrom;
     [SerializeField] public static float speedModifier;
     public static int routeToGo;
     public static float tParam, tParamNext;
     public static Vector3 objectPosition, objectPositionNext;
-    private bool coroutineAllowed, isSwiping;
+    public static bool coroutineAllowed, isSwiping;
     int LerpRatio = 45,
         LerpCount = 0;      // For Lerp operation
 
+    private List<Transform> routes;
     PhotonView view;
-    GameObject Object;
 
     void Start()
     {
+        path = GameObject.Find("PlayerRoutes");
+        routes = new List<Transform>();
+
+        for (int i = 0; i < path.transform.childCount; i++)
+        {
+            routes.Add(path.transform.GetChild(i));
+        }
+
         pos = SpawnPlayers.pos;
         posFrom = pos;
         routeToGo = 0;
@@ -35,59 +43,24 @@ public class curveFollow : MonoBehaviour
     {
         if (coroutineAllowed)
         {
-            StartCoroutine(GoByTheRoute(routeToGo));
-        }   
-    }
-
-    private void OnCollisionEnter(Collision collision)
-    {
-        if(collision.gameObject.CompareTag("Ice Spell"))
-        {
-            Object = collision.gameObject;
-            if (Object.GetComponent<PhotonView>().IsMine)
-            {   
-                PhotonNetwork.Destroy(Object);
-                PhotonView photonView = PhotonView.Get(this);
-                photonView.RPC("SpeedMod", RpcTarget.Others, 0f);
-                photonView.RPC("IceTrapActivation", RpcTarget.All);
-                StartCoroutine(IceEffect());
-            }
+            StartCoroutine(GoByTheRoute());
         }
     }
 
-    private IEnumerator IceEffect()
-    {
-        yield return new WaitForSeconds(5);
-        IceTrapDeActivation1();
-    }
-
-    private void IceTrapDeActivation1()
-    {
-        Debug.Log("IceTrapDeActivation1");
-        if (!view.IsMine)
-        {
-            Debug.Log("Buz Kapatma");
-            PhotonView photonView = PhotonView.Get(this);
-            photonView.RPC("IceTrapDeActivation", RpcTarget.All);
-            photonView.RPC("SpeedMod", RpcTarget.Others, 0.25f);
-        }
-    }
-
-    private IEnumerator GoByTheRoute(int routeNum)
+    public IEnumerator GoByTheRoute()
     {
         if (view.IsMine)
         {
-            Debug.Log(speedModifier);
             coroutineAllowed = false;
-
-            Vector3 p0 = routes[routeNum].GetChild(0).position;
-            Vector3 p1 = routes[routeNum].GetChild(1).position;
-            Vector3 p2 = routes[routeNum].GetChild(2).position;
-            Vector3 p3 = routes[routeNum].GetChild(3).position;
 
             while (tParam < 1)
             {
-                // Karakterin o anki Bezier Þekli içindeki konumunu ve bakmasý gereken noktayý hesaplar
+                Vector3 p0 = routes[routeToGo].transform.GetChild(0).position;
+                Vector3 p1 = routes[routeToGo].transform.GetChild(1).position;
+                Vector3 p2 = routes[routeToGo].transform.GetChild(2).position;
+                Vector3 p3 = routes[routeToGo].transform.GetChild(3).position;
+
+                // Karakterin o anki Bezier ï¿½ekli iï¿½indeki konumunu ve bakmasï¿½ gereken noktayï¿½ hesaplar
                 tParam += Time.deltaTime * speedModifier;
 
                 objectPosition = Mathf.Pow(1 - tParam, 3) * p0
@@ -101,27 +74,27 @@ public class curveFollow : MonoBehaviour
                                 + 3 * Mathf.Pow(1 - tParamNext, 2) * tParamNext * p1
                                 + 3 * (1 - tParamNext) * Mathf.Pow(tParamNext, 2) * p2
                                 + Mathf.Pow(tParamNext, 3) * p3;
-
-                // Oyuncunun karakter konumunu deðiþtirip deðiþtirmediðine bakar.
-                if (movement.pos != pos && !isSwiping)
+                
+                // Oyuncunun karakter konumunu deï¿½iï¿½tirip deï¿½iï¿½tirmediï¿½ine bakar.
+                if (movement.pos != pos && !isSwiping && speedModifier > 0f)
                 {
                     posFrom = pos;
                     pos = movement.pos;
                     isSwiping = true;
                 }
 
-                // Eðer karakter solda olmasý gerekiyorsa
+                // Eï¿½er karakter solda olmasï¿½ gerekiyorsa
                 if (pos == -1)
                 {
-                    // Eðer karakter sola kaydýrýlýyorsa
+                    // Eï¿½er karakter sola kaydï¿½rï¿½lï¿½yorsa
                     if (isSwiping)
                     {
-                        // Karakter kademeli sola kaydýrýlýyor
-                        objectPosition = Vector3.Lerp(objectPosition, objectPosition + (transform.right * -2), (float)LerpCount / LerpRatio);
-                        objectPositionNext = Vector3.Lerp(objectPositionNext, objectPositionNext + (transform.right * -2), (float)LerpCount / LerpRatio);
+                        // Karakter kademeli sola kaydï¿½rï¿½lï¿½yor
+                        objectPosition = Vector3.Lerp(objectPosition, objectPosition + (transform.right * -4), ((float)LerpCount / LerpRatio));
+                        objectPositionNext = Vector3.Lerp(objectPositionNext, objectPositionNext + (transform.right * -4), ((float)LerpCount / LerpRatio));
                         LerpCount++;
 
-                        // Kaydýrýlma iþlemi tamamlandýysa
+                        // Kaydï¿½rï¿½lma iï¿½lemi tamamlandï¿½ysa
                         if (LerpCount == LerpRatio)
                         {
                             LerpCount = 0;
@@ -129,27 +102,26 @@ public class curveFollow : MonoBehaviour
                             posFrom = pos;
                         }
                     }
-                    // Eðer karakter zaten soldaysa
+                    // Eï¿½er karakter zaten soldaysa
                     else
                     {
-                        objectPosition += transform.right * -2;
-                        objectPositionNext += transform.right * -2;
+                        objectPosition += transform.right * -4;
+                        objectPositionNext += transform.right * -4;
                     }
-
                 }
 
-                // Eðer karakter saðda olmasý gerekiyorsa
+                // Eï¿½er karakter saï¿½da olmasï¿½ gerekiyorsa
                 else if (pos == 1)
                 {
-                    // Eðer karakter saða kaydýrýlýyorsa
+                    // Eï¿½er karakter saï¿½a kaydï¿½rï¿½lï¿½yorsa
                     if (isSwiping)
                     {
-                        // Karakter kademeli sola kaydýrýlýyor
-                        objectPosition = Vector3.Lerp(objectPosition, objectPosition + (transform.right * 2), (float)LerpCount / LerpRatio);
-                        objectPositionNext = Vector3.Lerp(objectPositionNext, objectPositionNext + (transform.right * 2), (float)LerpCount / LerpRatio);
+                        // Karakter kademeli sola kaydï¿½rï¿½lï¿½yor
+                        objectPosition = Vector3.Lerp(objectPosition, objectPosition + (transform.right * 4), (float)LerpCount / LerpRatio);
+                        objectPositionNext = Vector3.Lerp(objectPositionNext, objectPositionNext + (transform.right * 4), (float)LerpCount / LerpRatio);
                         LerpCount++;
 
-                        // Kaydýrýlma iþlemi tamamlandýysa
+                        // Kaydï¿½rï¿½lma iï¿½lemi tamamlandï¿½ysa
                         if (LerpCount == LerpRatio)
                         {
                             LerpCount = 0;
@@ -158,29 +130,28 @@ public class curveFollow : MonoBehaviour
                         }
                     }
 
-                    // Eðer karakter zaten saðdaysa
+                    // Eï¿½er karakter zaten saï¿½daysa
                     else
                     {
-                        objectPosition += transform.right * 2;
-                        objectPositionNext += transform.right * 2;
+                        objectPosition += transform.right * 4;
+                        objectPositionNext += transform.right * 4;
                     }
-
                 }
 
-                // Karakter ortada olmasý gerekiyorsa
+                // Karakter ortada olmasï¿½ gerekiyorsa
                 else if (pos == 0)
                 {
-                    // Karakter ortaya kaydýrýlýyorsa
+                    // Karakter ortaya kaydï¿½rï¿½lï¿½yorsa
                     if (isSwiping)
                     {
-                        // Saðdan ortaya geçiyorsa
+                        // Saï¿½dan ortaya geï¿½iyorsa
                         if (posFrom == 1)
                         {
-                            objectPosition = Vector3.Lerp(objectPosition + (transform.right * 2), objectPosition, (float)LerpCount / LerpRatio);
-                            objectPositionNext = Vector3.Lerp(objectPositionNext + (transform.right * 2), objectPositionNext, (float)LerpCount / LerpRatio);
+                            objectPosition = Vector3.Lerp(objectPosition + (transform.right * 4), objectPosition, (float)LerpCount / LerpRatio);
+                            objectPositionNext = Vector3.Lerp(objectPositionNext + (transform.right * 4), objectPositionNext, (float)LerpCount / LerpRatio);
                             LerpCount++;
 
-                            // Kaydýrýlma iþlemi tamamlandýysa
+                            // Kaydï¿½rï¿½lma iï¿½lemi tamamlandï¿½ysa
                             if (LerpCount == LerpRatio)
                             {
                                 LerpCount = 0;
@@ -189,14 +160,14 @@ public class curveFollow : MonoBehaviour
                             }
                         }
 
-                        //Soldan ortaya geçiyorsa
+                        //Soldan ortaya geï¿½iyorsa
                         else if (posFrom == -1)
                         {
-                            objectPosition = Vector3.Lerp(objectPosition + (transform.right * -2), objectPosition, (float)LerpCount / LerpRatio);
-                            objectPositionNext = Vector3.Lerp(objectPositionNext + (transform.right * -2), objectPositionNext, (float)LerpCount / LerpRatio);
+                            objectPosition = Vector3.Lerp(objectPosition + (transform.right * -4), objectPosition, (float)LerpCount / LerpRatio);
+                            objectPositionNext = Vector3.Lerp(objectPositionNext + (transform.right * -4), objectPositionNext, (float)LerpCount / LerpRatio);
                             LerpCount++;
 
-                            // Kaydýrýlma iþlemi tamamlandýysa
+                            // Kaydï¿½rï¿½lma iï¿½lemi tamamlandï¿½ysa
                             if (LerpCount == LerpRatio)
                             {
                                 LerpCount = 0;
@@ -207,7 +178,7 @@ public class curveFollow : MonoBehaviour
                     }
                 }
 
-                // Hesaplanan karakter konumu ve bakýþý iþleniyor
+                // Hesaplanan karakter konumu ve bakï¿½ï¿½ï¿½ iï¿½leniyor
                 transform.position = objectPosition;
                 transform.LookAt(objectPositionNext);
 
@@ -217,30 +188,12 @@ public class curveFollow : MonoBehaviour
             tParam = 0f;
             routeToGo += 1;
 
-            if (routeToGo > routes.Length - 1)
+            if (routeToGo > routes.Count - 1)
             {
                 routeToGo = 0;
             }
 
             coroutineAllowed = true;
         }
-    }
-
-    [PunRPC]
-    void SpeedMod(float a)
-    {
-        speedModifier = a;
-    }
-
-    [PunRPC]
-    void IceTrapActivation()
-    {
-        gameObject.transform.Find("Ice Trap 1").gameObject.SetActive(true);
-    }
-    
-    [PunRPC]
-    void IceTrapDeActivation()
-    {
-        gameObject.transform.Find("Ice Trap 1").gameObject.SetActive(false);
     }
 }
