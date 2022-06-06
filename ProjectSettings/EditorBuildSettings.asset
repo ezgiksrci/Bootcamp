@@ -5,19 +5,25 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
-    path: Assets/Scenes/MainMenu.unity
-    guid: 4c2e53bd866ad874c90c8e74e8fbd461
-  - enabled: 1
-    path: Assets/Scenes/Loading.unity
-    guid: d16c0b67467e5cd4586eb51458c5c94e
-  - enabled: 1
-    path: Assets/Scenes/Lobby.unity
-    guid: a6bacb7d9b385ce45b95f99b2da2cb9d
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/CityVoxelPack/DemoScenes/Demo.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/Scenes/Loading.unity
+    guid: 82af13838c4d44d4789f5c9fbec59d08
+  - enabled: 1
+    path: Assets/Scenes/Lobby.unity
+    guid: fb611261d902be2469dbee4547fab400
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 25f02910bb8bd8a429246737d62d3681
   m_configObjects: {}
