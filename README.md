@@ -130,9 +130,9 @@ Story'ler yapılacak işlere (task'lere) bölünmüştür. Miro Board'da gözük
  
 - **Backlog düzeni:** Backlog'umuz ilk yapılacak backloglara göre düzenlenmiştir.
  
-- **Daily Scrum:** <https://github.com/ezgiksrci/Bootcamp/blob/main/ProjectManagement/Sprint2Documents/DailyScrum_WhatsApp_3.txt> 
+- **Daily Scrum:** <https://github.com/ezgiksrci/Bootcamp/blob/main/ProjectManagement/Sprint3Documents/DailyScrum_WhatsApp_3.txt.txt> 
  
-- **Sprint board update:** Sprint board screenshotları: ![Backlog 2](https://github.com/ezgiksrci/Bootcamp/blob/main/ProjectManagement/Sprint2Documents/backlog3.png)
+- **Sprint board update:** Sprint board screenshotları: ![Backlog 3](https://github.com/ezgiksrci/Bootcamp/blob/main/ProjectManagement/Sprint3Documents/backlog3.png)
 
 
 - **Ürün Durumu:** Ekran görüntüleri:
